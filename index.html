@@ -3,17 +3,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
     
-    <!-- SEO & Meta Tags -->
-    <title>Privacy Policy - Dynamic Edge Gesture Control</title>
-    <meta name="description" content="Privacy Policy for Dynamic Edge Gesture Control. Complete transparency regarding how we handle your data, permissions, and local features.">
-    <meta name="theme-color" content="#030712">
-    <meta property="og:title" content="Privacy Policy - Dynamic Edge Gesture Control">
-    <meta property="og:description" content="Complete transparency regarding how we handle your data, permissions, and local features.">
-    <meta property="og:type" content="website">
-    
+    <!-l
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="" rel="stylesheet">
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
         tailwind.config = {
@@ -47,101 +40,6 @@
             background: rgba(17, 24, 39, 0.75);
             backdrop-filter: blur(16px);
             -webkit-backdrop-filter: blur(16px);
-            border: 1px solid rgba(255, 255, 255, 0.08);
-        }
-        .glass-card {
-            background: rgba(30, 41, 59, 0.35);
-            border: 1px solid rgba(255, 255, 255, 0.05);
-            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-        }
-        .glass-card:hover {
-            border-color: rgba(59, 130, 246, 0.35);
-            background: rgba(30, 41, 59, 0.65);
-            box-shadow: 0 12px 30px -10px rgba(59, 130, 246, 0.15);
-        }
-        .glow-bg {
-            position: fixed;
-            width: 100vw;
-            height: 100vh;
-            top: 0;
-            left: 0;
-            pointer-events: none;
-            z-index: -1;
-            background: 
-                radial-gradient(circle at 15% 15%, rgba(59, 130, 246, 0.12) 0%, transparent 40%),
-                radial-gradient(circle at 85% 75%, rgba(139, 92, 246, 0.12) 0%, transparent 40%),
-                radial-gradient(circle at 50% 50%, rgba(3, 7, 18, 1) 0%, rgba(3, 7, 18, 1) 100%);
-        }
-        /* Custom scrollbar */
-        ::-webkit-scrollbar {
-            width: 6px;
-            height: 6px;
-        }
-        ::-webkit-scrollbar-track {
-            background: #030712;
-        }
-        ::-webkit-scrollbar-thumb {
-            background: #1e293b;
-            border-radius: 9999px;
-        }
-        ::-webkit-scrollbar-thumb:hover {
-            background: #3b82f6;
-        }
-        
-        /* Hide scrollbar for quick links */
-        .hide-scrollbar::-webkit-scrollbar {
-            display: none;
-        }
-        .hide-scrollbar {
-            -ms-overflow-style: none;
-            scrollbar-width: none;
-        }
-
-        /* Offset scrolling so the combined sticky headers don't cover content */
-        .policy-section {
-            scroll-margin-top: 130px; 
-        }
-        @media (min-width: 640px) {
-            .policy-section {
-                scroll-margin-top: 145px;
-            }
-        }
-    </style>
-</head>
-<body class="bg-slate-950 text-slate-100 min-h-screen selection:bg-blue-500 selection:text-white relative antialiased">
-    
-    <!-- Reading Progress Bar -->
-    <div class="fixed top-0 left-0 w-full h-1 z-[60] bg-slate-900" aria-hidden="true">
-        <div id="progressBar" class="h-full bg-gradient-to-r from-blue-400 via-indigo-500 to-amber-500 w-0 transition-all duration-150 ease-out"></div>
-    </div>
-
-    <div class="glow-bg" aria-hidden="true"></div>
-
-    <!-- MAIN STICKY HEADER (Left Aligned App Logo & Name) -->
-    <header class="sticky top-0 z-50 w-full bg-[#030712]/95 backdrop-blur-xl border-b border-slate-800 shadow-lg shadow-black/40">
-        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-3 sm:py-4 flex items-center justify-start gap-3 w-full">
-            <div class="w-7 h-7 sm:w-8 sm:h-8 rounded-lg overflow-hidden shadow-sm shadow-blue-500/20 shrink-0 border border-white/10" aria-hidden="true">
-                <svg viewBox="0 0 100 100" class="w-full h-full" xmlns="http://www.w3.org/2000/svg">
-                    <defs>
-                        <linearGradient id="bgGradHero" x1="0%" y1="0%" x2="100%" y2="100%">
-                            <stop offset="0%" stop-color="#4c1d95"/>
-                            <stop offset="50%" stop-color="#1e1b4b"/>
-                            <stop offset="100%" stop-color="#b45309"/>
-                        </linearGradient>
-                        <linearGradient id="neonGradHero" x1="0%" y1="0%" x2="100%" y2="100%">
-                            <stop offset="0%" stop-color="#38bdf8"/>
-                            <stop offset="50%" stop-color="#a855f7"/>
-                            <stop offset="100%" stop-color="#f97316"/>
-                        </linearGradient>
-                    </defs>
-                    <rect width="100" height="100" fill="url(#bgGradHero)"/>
-                    <path d="M 20 22 C 20 18 24 14 28 14 L 38 14 C 40 14 42 16 43 18 L 45 22 C 46 24 48 25 50 25 C 52 25 54 24 55 22 L 57 18 C 58 16 60 14 62 14 L 72 14 C 76 14 80 18 80 22 L 80 78 C 80 82 76 86 72 86 L 28 86 C 24 86 20 82 20 78 Z" fill="none" stroke="url(#neonGradHero)" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/>
-                    <circle cx="47" cy="18" r="2" fill="#38bdf8"/>
-                    <circle cx="53" cy="18" r="1.5" fill="#a855f7"/>
-                    <path d="M 28 42 C 28 68 45 74 52 56 C 54 50 50 42 45 42 C 40 42 38 48 42 54" fill="none" stroke="#38bdf8" stroke-width="4" stroke-linecap="round"/>
-                    <path d="M 62 30 A 28 28 0 0 1 78 44 L 70 47 A 18 18 0 0 0 59 37 Z" fill="#f97316" opacity="0.9"/>
-                    <path d="M 79 47 A 28 28 0 0 1 79 63 L 71 60 A 18 18 0 0 0 71 50 Z" fill="#fb923c" opacity="0.9"/>
-                    <path d="M 77 66 A 28 28 0 0 1 63 78 L 58 70 A 18 18 0 0 0 68 61 Z" fill="#ef4444" opacity="0.9"/>
                     <circle cx="50" cy="50" r="4" fill="#ffffff"/>
                     <path d="M 50 43 L 50 57 M 43 50 L 57 50 M 45 45 L 55 55 M 45 55 L 55 45" stroke="#ffffff" stroke-width="2" stroke-linecap="round"/>
                 </svg>
