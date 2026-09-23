@@ -1,15 +1,19 @@
-<html lang="en" class="scroll-smooth">
+<html lang="en" class="dark scroll-smooth">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
     
-    <title>Comprehensive Technical Privacy Policy, Security Architecture & Regulatory Compliance Specification - Dynamic Edge Gesture Control</title>
-    <meta name="description" content="Exhaustive legal privacy policy, hardware interface specifications, memory safety boundaries, and Google Play Data Safety technical documentation for Dynamic Edge Gesture Control.">
-    <meta name="theme-color" content="#090d16">
-
+    <!-- SEO & Meta Tags -->
+    <title>Privacy Policy - Dynamic Edge Gesture Control</title>
+    <meta name="description" content="Official Privacy Policy for Dynamic Edge Gesture Control (com.m.payra.gesture.control.app). Complete disclosure of permissions, hardware capabilities, on-device gesture processing, and data practices.">
+    <meta name="theme-color" content="#030712">
+    <meta property="og:title" content="Privacy Policy - Dynamic Edge Gesture Control">
+    <meta property="og:description" content="Comprehensive privacy transparency: permissions, hardware features, local sandboxing, and security.">
+    <meta property="og:type" content="website">
+    
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
         tailwind.config = {
@@ -17,16 +21,16 @@
             theme: {
                 extend: {
                     fontFamily: {
-                        sans: ['Inter', '-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'Roboto', 'sans-serif'],
-                        mono: ['JetBrains Mono', 'monospace'],
+                        sans: ['Plus Jakarta Sans', 'sans-serif'],
                     },
                     colors: {
-                        surface: {
-                            base: '#090d16',
-                            raised: '#0f172a',
-                            overlay: '#1e293b',
-                            border: '#334155',
-                            borderMuted: '#1e293b'
+                        brand: {
+                            50: '#eff6ff',
+                            100: '#dbeafe',
+                            400: '#60a5fa',
+                            500: '#3b82f6',
+                            600: '#2563eb',
+                            700: '#1d4ed8',
                         }
                     }
                 }
@@ -35,827 +39,678 @@
     </script>
     <style>
         body {
-            background-color: #090d16;
-            color: #cbd5e1;
-            font-feature-settings: "cv02", "cv03", "cv04", "cv11";
-            text-rendering: optimizeLegibility;
-            -webkit-font-smoothing: antialiased;
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            background-color: #030712;
+            overflow-x: clip; 
         }
-        .content-section {
-            scroll-margin-top: 5rem;
+        .glass-panel {
+            background: rgba(17, 24, 39, 0.75);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+        }
+        .glass-card {
+            background: rgba(30, 41, 59, 0.35);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .glass-card:hover {
+            border-color: rgba(59, 130, 246, 0.35);
+            background: rgba(30, 41, 59, 0.65);
+            box-shadow: 0 12px 30px -10px rgba(59, 130, 246, 0.15);
+        }
+        .glow-bg {
+            position: fixed;
+            width: 100vw;
+            height: 100vh;
+            top: 0;
+            left: 0;
+            pointer-events: none;
+            z-index: -1;
+            background: 
+                radial-gradient(circle at 15% 15%, rgba(59, 130, 246, 0.12) 0%, transparent 40%),
+                radial-gradient(circle at 85% 75%, rgba(139, 92, 246, 0.12) 0%, transparent 40%),
+                radial-gradient(circle at 50% 50%, rgba(3, 7, 18, 1) 0%, rgba(3, 7, 18, 1) 100%);
         }
         ::-webkit-scrollbar {
             width: 6px;
             height: 6px;
         }
         ::-webkit-scrollbar-track {
-            background: #090d16;
+            background: #030712;
         }
         ::-webkit-scrollbar-thumb {
             background: #1e293b;
-            border-radius: 3px;
+            border-radius: 9999px;
         }
         ::-webkit-scrollbar-thumb:hover {
-            background: #334155;
+            background: #3b82f6;
         }
-        code {
-            font-family: 'JetBrains Mono', monospace;
+        .hide-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .hide-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+        .policy-section {
+            scroll-margin-top: 130px; 
+        }
+        @media (min-width: 640px) {
+            .policy-section {
+                scroll-margin-top: 145px;
+            }
         }
     </style>
 </head>
-<body class="min-h-screen text-slate-300 antialiased selection:bg-blue-600 selection:text-white">
-
-    <!-- Scroll Progress Indicator -->
-    <div class="fixed top-0 left-0 w-full h-[3px] z-50 bg-slate-900/60 backdrop-blur">
-        <div id="progressBar" class="h-full bg-gradient-to-r from-blue-600 via-indigo-500 to-cyan-400 w-0 transition-all duration-75 ease-out"></div>
+<body class="bg-slate-950 text-slate-100 min-h-screen selection:bg-blue-500 selection:text-white relative antialiased">
+    
+    <!-- Top Reading Progress Indicator -->
+    <div class="fixed top-0 left-0 w-full h-1 z-[60] bg-slate-900" aria-hidden="true">
+        <div id="progressBar" class="h-full bg-gradient-to-r from-blue-400 via-indigo-500 to-amber-500 w-0 transition-all duration-150 ease-out"></div>
     </div>
 
-    <!-- Master Header -->
-    <header class="border-b border-slate-800/80 bg-[#0b0f19]/95 backdrop-blur-md sticky top-0 z-40">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 h-16 flex items-center justify-between">
+    <div class="glow-bg" aria-hidden="true"></div>
+
+    <!-- MAIN HEADER -->
+    <header class="sticky top-0 z-50 w-full bg-[#030712]/95 backdrop-blur-xl border-b border-slate-800 shadow-lg shadow-black/40">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-3 sm:py-4 flex items-center justify-between gap-3 w-full">
             <div class="flex items-center gap-3">
-                <span class="w-3 h-3 rounded-full bg-blue-500 ring-4 ring-blue-500/20 animate-pulse"></span>
-                <div class="flex flex-col">
-                    <span class="font-bold text-slate-100 text-sm tracking-tight">Dynamic Edge Gesture Control</span>
-                    <span class="text-[10px] text-slate-400 font-mono hidden sm:inline">Enterprise Architecture & Data Protocol</span>
+                <div class="w-7 h-7 sm:w-8 sm:h-8 rounded-lg overflow-hidden shadow-sm shadow-blue-500/20 shrink-0 border border-white/10" aria-hidden="true">
+                    <svg viewBox="0 0 100 100" class="w-full h-full" xmlns="http://www.w3.org/2000/svg">
+                        <defs>
+                            <linearGradient id="bgGradHero" x1="0%" y1="0%" x2="100%" y2="100%">
+                                <stop offset="0%" stop-color="#4c1d95"/>
+                                <stop offset="50%" stop-color="#1e1b4b"/>
+                                <stop offset="100%" stop-color="#b45309"/>
+                            </linearGradient>
+                            <linearGradient id="neonGradHero" x1="0%" y1="0%" x2="100%" y2="100%">
+                                <stop offset="0%" stop-color="#38bdf8"/>
+                                <stop offset="50%" stop-color="#a855f7"/>
+                                <stop offset="100%" stop-color="#f97316"/>
+                            </linearGradient>
+                        </defs>
+                        <rect width="100" height="100" fill="url(#bgGradHero)"/>
+                        <path d="M 20 22 C 20 18 24 14 28 14 L 38 14 C 40 14 42 16 43 18 L 45 22 C 46 24 48 25 50 25 C 52 25 54 24 55 22 L 57 18 C 58 16 60 14 62 14 L 72 14 C 76 14 80 18 80 22 L 80 78 C 80 82 76 86 72 86 L 28 86 C 24 86 20 82 20 78 Z" fill="none" stroke="url(#neonGradHero)" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/>
+                        <circle cx="47" cy="18" r="2" fill="#38bdf8"/>
+                        <circle cx="53" cy="18" r="1.5" fill="#a855f7"/>
+                        <path d="M 28 42 C 28 68 45 74 52 56 C 54 50 50 42 45 42 C 40 42 38 48 42 54" fill="none" stroke="#38bdf8" stroke-width="4" stroke-linecap="round"/>
+                        <path d="M 62 30 A 28 28 0 0 1 78 44 L 70 47 A 18 18 0 0 0 59 37 Z" fill="#f97316" opacity="0.9"/>
+                        <path d="M 79 47 A 28 28 0 0 1 79 63 L 71 60 A 18 18 0 0 0 71 50 Z" fill="#fb923c" opacity="0.9"/>
+                        <path d="M 77 66 A 28 28 0 0 1 63 78 L 58 70 A 18 18 0 0 0 68 61 Z" fill="#ef4444" opacity="0.9"/>
+                        <circle cx="50" cy="50" r="4" fill="#ffffff"/>
+                        <path d="M 50 43 L 50 57 M 43 50 L 57 50 M 45 45 L 55 55 M 45 55 L 55 45" stroke="#ffffff" stroke-width="2" stroke-linecap="round"/>
+                    </svg>
                 </div>
-                <span class="text-xs text-slate-400 hidden md:inline border-l border-slate-700/80 pl-3 font-mono">SPEC-REV-2026.09.23</span>
+                <span class="text-[14px] sm:text-[16px] font-bold text-slate-100 truncate">
+                    Dynamic Edge Gesture Control
+                </span>
             </div>
-            <div class="flex items-center gap-4 text-xs font-mono">
-                <a href="https://play.google.com/store/apps/details?id=com.m.payra.gesture.control.app" target="_blank" rel="noopener noreferrer" class="text-slate-400 hover:text-blue-400 border border-slate-800 hover:border-blue-500/50 bg-slate-900/50 px-3 py-1.5 rounded transition-all flex items-center gap-1.5">
-                    <span>Play Store</span>
-                    <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/></svg>
-                </a>
+            <div class="text-[11px] sm:text-xs text-slate-400 font-mono">
+                App ID: <span class="text-blue-400">com.m.payra.gesture.control.app</span>
             </div>
         </div>
     </header>
 
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 py-12 lg:py-16">
-        <div class="grid grid-cols-1 lg:grid-cols-12 gap-12">
+    <!-- Main Container -->
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 pb-8 sm:pb-16 relative pt-8 sm:pt-12">
+        
+        <!-- Hero Title Section -->
+        <div class="text-center mb-8 sm:mb-12">
+            <h1 class="text-3xl sm:text-5xl md:text-6xl font-extrabold tracking-tight bg-gradient-to-r from-white via-slate-200 to-blue-400 bg-clip-text text-transparent mb-4 leading-tight">
+                Privacy Policy
+            </h1>
+            <p class="text-slate-400 text-sm sm:text-base max-w-2xl mx-auto mb-6">
+                Complete, uncompromising, and absolutely exhaustive transparency regarding how we handle your data, declared permissions, hardware features, local operations, third-party integrations, and the intricate technical underpinnings that power our gesture recognition algorithms.
+            </p>
 
-            <!-- Sidebar Navigation -->
-            <aside class="hidden lg:block lg:col-span-3">
-                <nav class="sticky top-24 space-y-1.5 text-xs border-l border-slate-800/80 pl-4 font-medium max-h-[calc(100vh-8rem)] overflow-y-auto pr-2">
-                    <div class="text-[11px] font-mono uppercase tracking-widest text-slate-300 font-semibold mb-3">Document Index</div>
-                    <a href="#overview" class="block py-1 text-slate-400 hover:text-blue-400 transition-colors">01. Foundational Architecture</a>
-                    <a href="#definitions" class="block py-1 text-slate-400 hover:text-blue-400 transition-colors">02. Lexicon & Terminology</a>
-                    <a href="#data-safety" class="block py-1 text-slate-400 hover:text-blue-400 transition-colors">03. Google Play Safety Matrix</a>
-                    <a href="#accessibility" class="block py-1 text-slate-400 hover:text-blue-400 transition-colors">04. Accessibility Service Isolation</a>
-                    <a href="#overlays" class="block py-1 text-slate-400 hover:text-blue-400 transition-colors">05. Window Management & Overlays</a>
-                    <a href="#background" class="block py-1 text-slate-400 hover:text-blue-400 transition-colors">06. Persistence & Foreground Execution</a>
-                    <a href="#package-visibility" class="block py-1 text-slate-400 hover:text-blue-400 transition-colors">07. Package Visibility (QUERY_ALL)</a>
-                    <a href="#hardware-peripherals" class="block py-1 text-slate-400 hover:text-blue-400 transition-colors">08. Hardware Interfaces & Media</a>
-                    <a href="#contacts-telephony" class="block py-1 text-slate-400 hover:text-blue-400 transition-colors">09. Direct Dial & Contacts Lookup</a>
-                    <a href="#location-geofencing" class="block py-1 text-slate-400 hover:text-blue-400 transition-colors">10. Spatial & Geofence Operations</a>
-                    <a href="#biometrics" class="block py-1 text-slate-400 hover:text-blue-400 transition-colors">11. Biometric Enclave Security</a>
-                    <a href="#third-party-sdk" class="block py-1 text-slate-400 hover:text-blue-400 transition-colors">12. SDK Telemetry & Advertising</a>
-                    <a href="#billing-transactions" class="block py-1 text-slate-400 hover:text-blue-400 transition-colors">13. Billing Engine & Cryptography</a>
-                    <a href="#data-lifecycle" class="block py-1 text-slate-400 hover:text-blue-400 transition-colors">14. Retention, Erasure & Deletion</a>
-                    <a href="#statutory-rights" class="block py-1 text-slate-400 hover:text-blue-400 transition-colors">15. International Statutory Rights</a>
-                    <a href="#children-policy" class="block py-1 text-slate-400 hover:text-blue-400 transition-colors">16. Protection of Minors (COPPA)</a>
-                    <a href="#contact-redress" class="block py-1 text-slate-400 hover:text-blue-400 transition-colors">17. Developer Contact & Legal Venue</a>
-                </nav>
-            </aside>
+            <div class="flex justify-center">
+                <a href="https://play.google.com/store/apps/details?id=com.m.payra.gesture.control.app" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2.5 px-4 sm:px-5 py-2.5 rounded-xl bg-slate-900 border border-slate-700 hover:border-blue-500/50 text-slate-200 text-xs sm:text-sm font-semibold transition-all hover:bg-slate-800 shadow-md transform hover:-translate-y-0.5" aria-label="View on Google Play">
+                    <svg class="w-4 h-4 sm:w-5 sm:h-5 text-emerald-400 shrink-0" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                        <path d="M3,20.5V3.5C3,2.91 3.34,2.39 3.84,2.15L13.69,12L3.84,21.85C3.34,21.6 3,21.09 3,20.5M16.81,15.12L18.81,13.12C19.86,12.55 19.86,11.45 18.81,10.88L16.81,8.88L14.81,10.88L14.81,13.12L16.81,15.12M13.69,12L15.39,8.81L13.69,12M13.69,12L15.39,15.19L3.84,21.85L13.69,12Z"/>
+                    </svg>
+                    <span>View on Google Play</span>
+                    <svg class="w-3 h-3 sm:w-3.5 sm:h-3.5 text-slate-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/></svg>
+                </a>
+            </div>
+        </div>
 
-            <!-- Main Documentation Pipeline -->
-            <main class="lg:col-span-9 space-y-16 text-sm leading-relaxed">
+        <!-- Highlights Grid -->
+        <section id="highlights" class="grid grid-cols-1 sm:grid-cols-3 gap-3.5 sm:gap-4 mb-8 sm:mb-10">
+            <div class="glass-panel p-4 sm:p-5 rounded-2xl border border-slate-800">
+                <div class="w-9 h-9 sm:w-10 sm:h-10 rounded-xl bg-blue-500/10 text-blue-400 flex items-center justify-center text-lg sm:text-xl mb-2.5 sm:mb-3 border border-blue-500/20" aria-hidden="true">
+                    ⚡
+                </div>
+                <h3 class="text-sm sm:text-base font-semibold text-slate-100 mb-1">Strict Local Processing</h3>
+                <p class="text-slate-400 text-xs leading-relaxed">Gestures, radial pie menus, silent media captures, and quick notes are kept entirely and exclusively within your device's isolated storage sandbox. No external servers are ever utilized to process your interactions.</p>
+            </div>
 
-                <!-- Header Metadata Record -->
-                <div class="border-b border-slate-800 pb-10">
-                    <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-blue-500/10 border border-blue-500/20 text-blue-400 font-mono text-xs uppercase tracking-wider mb-4">
-                        <span class="w-1.5 h-1.5 rounded-full bg-blue-400"></span>
-                        Statutory Compliance Standard 2026.09
-                    </div>
-                    <h1 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-slate-100 tracking-tight mb-6">
-                        Technical Privacy Policy, Permission Manifest & Security Architecture Specification
-                    </h1>
-                    <p class="text-slate-400 text-base leading-relaxed mb-6">
-                        This specification represents the formal privacy documentation, data protection impact assessment, and runtime security model for the Android software application known as <strong class="text-slate-200">Dynamic Edge Gesture Control</strong>. It provides an exhaustive, unambiguous disclosure of every single permission, background thread, hardware hook, memory lifecycle, and third-party data transit pathway utilized across the entire lifecycle of the application.
+            <div class="glass-panel p-4 sm:p-5 rounded-2xl border border-slate-800">
+                <div class="w-9 h-9 sm:w-10 sm:h-10 rounded-xl bg-amber-500/10 text-amber-400 flex items-center justify-center text-lg sm:text-xl mb-2.5 sm:mb-3 border border-amber-500/20" aria-hidden="true">
+                    🔥
+                </div>
+                <h3 class="text-sm sm:text-base font-semibold text-slate-100 mb-1">Anonymized Diagnostics</h3>
+                <p class="text-slate-400 text-xs leading-relaxed">Firebase Crashlytics and Analytics strictly monitor application uptime, memory leaks, and latency without ever reading, intercepting, or transmitting your personal user content, files, or sensitive inputs.</p>
+            </div>
+
+            <div class="glass-panel p-4 sm:p-5 rounded-2xl border border-slate-800">
+                <div class="w-9 h-9 sm:w-10 sm:h-10 rounded-xl bg-emerald-500/10 text-emerald-400 flex items-center justify-center text-lg sm:text-xl mb-2.5 sm:mb-3 border border-emerald-500/20" aria-hidden="true">
+                    💳
+                </div>
+                <h3 class="text-sm sm:text-base font-semibold text-slate-100 mb-1">Secure Play Billing</h3>
+                <p class="text-slate-400 text-xs leading-relaxed">License validation, cryptographic receipt checking, and Pro purchases are managed entirely and securely by Google Play. We never directly handle, see, or process your credit cards or payment methods.</p>
+            </div>
+        </section>
+
+        <!-- Quick Jump Navbar -->
+        <nav class="sticky top-[52px] sm:top-[64px] z-40 mb-8 sm:mb-10 py-2 sm:py-3 bg-[#030712]/95 backdrop-blur-xl border-b border-t border-slate-800/50 mx-[-16px] px-[16px] sm:mx-0 sm:px-4 sm:rounded-2xl shadow-lg shadow-black/30 transition-all">
+            <div class="flex overflow-x-auto hide-scrollbar gap-2 sm:gap-2.5 w-full justify-start sm:justify-center items-center text-xs">
+                <a href="#intro" class="whitespace-nowrap px-3.5 py-1.5 rounded-full bg-slate-800/60 border border-slate-600/50 text-slate-300 hover:bg-blue-500/20 hover:text-blue-300 transition-all">Intro</a>
+                <a href="#permissions" class="whitespace-nowrap px-3.5 py-1.5 rounded-full bg-slate-800/60 border border-slate-600/50 text-slate-300 hover:bg-blue-500/20 hover:text-blue-300 transition-all">Permissions</a>
+                <a href="#hardware" class="whitespace-nowrap px-3.5 py-1.5 rounded-full bg-slate-800/60 border border-slate-600/50 text-slate-300 hover:bg-blue-500/20 hover:text-blue-300 transition-all">Hardware</a>
+                <a href="#packages" class="whitespace-nowrap px-3.5 py-1.5 rounded-full bg-slate-800/60 border border-slate-600/50 text-slate-300 hover:bg-blue-500/20 hover:text-blue-300 transition-all">Package Visibility</a>
+                <a href="#ads-analytics" class="whitespace-nowrap px-3.5 py-1.5 rounded-full bg-slate-800/60 border border-slate-600/50 text-slate-300 hover:bg-amber-500/20 hover:text-amber-300 transition-all">Ads & Telemetry</a>
+                <a href="#billing" class="whitespace-nowrap px-3.5 py-1.5 rounded-full bg-slate-800/60 border border-slate-600/50 text-slate-300 hover:bg-blue-500/20 hover:text-blue-300 transition-all">Billing</a>
+                <a href="#security" class="whitespace-nowrap px-3.5 py-1.5 rounded-full bg-slate-800/60 border border-slate-600/50 text-slate-300 hover:bg-blue-500/20 hover:text-blue-300 transition-all">Security</a>
+                <a href="#contact" class="whitespace-nowrap px-3.5 py-1.5 rounded-full bg-slate-800/60 border border-slate-600/50 text-slate-300 hover:bg-blue-500/20 hover:text-blue-300 transition-all">Contact</a>
+            </div>
+        </nav>
+
+        <!-- Main Body -->
+        <main class="space-y-6 sm:space-y-8">
+
+            <!-- Section 1: Introduction -->
+            <section id="intro" class="policy-section glass-panel rounded-2xl sm:rounded-3xl p-5 sm:p-8 md:p-10 shadow-xl relative overflow-hidden">
+                <div class="absolute top-0 left-0 w-1 sm:w-1.5 h-full bg-gradient-to-b from-blue-500 to-indigo-500"></div>
+                <h2 class="text-lg sm:text-2xl font-bold text-slate-100 mb-3 sm:mb-4 flex items-center gap-2.5">
+                    <span class="text-blue-400 text-xs sm:text-sm font-extrabold uppercase tracking-widest bg-blue-500/10 px-2 py-0.5 sm:py-1 rounded-md border border-blue-500/20">01</span>
+                    Introduction & Fundamental Architecture
+                </h2>
+                <div class="space-y-4 sm:space-y-5 text-slate-300 text-sm sm:text-base leading-relaxed">
+                    <p>
+                        This extraordinarily detailed and comprehensive Privacy Policy describes with absolute precision how <strong>Dynamic Edge Gesture Control</strong> (officially registered under the Application ID: <code>com.m.payra.gesture.control.app</code>), meticulously developed and maintained by <strong>Madhusudan Payra</strong> ("we", "us", "our", or "the developer"), collects, utilizes, manages, processes, and ultimately safeguards your deeply personal and sensitive device information. In an era where digital privacy is constantly under siege by invasive data collection practices, we believe that providing an exhaustive breakdown of our operational architecture is not just a legal requirement, but a profound moral obligation to our user base.
                     </p>
-                    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4 p-4 rounded-xl border border-slate-800 bg-[#0d131f] text-xs font-mono">
-                        <div>
-                            <span class="text-slate-400 block mb-0.5">Package Identifier</span>
-                            <span class="text-blue-400 break-all font-semibold">com.m.payra.gesture.control.app</span>
+                    <p>
+                        The application is designed fundamentally as an advanced utility meant to provide system-wide customization, edge navigation sliders, intuitive notch menus, hovering floating panels, and situational shortcuts that adapt to your daily workflow. To achieve this seemingly magical level of seamless integration with the Android operating system, the app operates on a strict, unyielding <strong>local-first processing model</strong>. What this means in practical terms is that your gesture triggers (whether they are rapid swipes, prolonged holds, or multi-finger taps), the complex touch detection mathematical routines, your meticulously crafted custom shortcuts, and even your personal encrypted quick notes are all computed, evaluated, and retained directly on your device's physical hardware. We do not run, maintain, or rent any external user-profiling cloud servers. We never harvest your data to build advertising profiles, and we absolutely never transmit or sell your personal files, interaction history, or behavioral metrics to third-party data brokers.
+                    </p>
+                    <p>
+                        By engineering the application to function autonomously within the confines of your device's local memory and storage, we physically eliminate the vectors through which data leaks typically occur. The Android sandboxing architecture ensures that our application exists in its own secure silo, unable to broadcast your gesture inputs to the wider internet without explicit network calls—which we have intentionally omitted from our core feature set. Our philosophy is simple: what happens on your screen, dictated by your fingers, is none of our business.
+                    </p>
+                    <p class="text-xs sm:text-sm bg-slate-900/80 border border-slate-800 p-3.5 sm:p-4 rounded-xl text-slate-400">
+                        By continuing to install, configure, and utilize Dynamic Edge Gesture Control, you explicitly acknowledge, comprehend, and unconditionally agree to the highly specific permissions model, the targeted hardware usage requirements, and the transparent third-party integrations outlined in agonizing detail within the sections below.
+                    </p>
+                </div>
+            </section>
+
+            <!-- Section 2: Complete Manifest Permissions Disclosure -->
+            <section id="permissions" class="policy-section glass-panel rounded-2xl sm:rounded-3xl p-5 sm:p-8 md:p-10 shadow-xl relative overflow-hidden">
+                <div class="absolute top-0 left-0 w-1 sm:w-1.5 h-full bg-gradient-to-b from-blue-500 to-indigo-500"></div>
+                <h2 class="text-lg sm:text-2xl font-bold text-slate-100 mb-3 sm:mb-4 flex items-center gap-2.5">
+                    <span class="text-blue-400 text-xs sm:text-sm font-extrabold uppercase tracking-widest bg-blue-500/10 px-2 py-0.5 sm:py-1 rounded-md border border-blue-500/20">02</span>
+                    Exhaustive Manifest Permissions Disclosure
+                </h2>
+                <p class="text-slate-300 text-sm sm:text-base leading-relaxed mb-6 sm:mb-8">
+                    To properly deliver system-wide, universally responsive gestures and highly advanced overlay automation without causing system instability, our application must request explicit, highly privileged permissions from the Android OS. Every single permission listed in our `AndroidManifest.xml` file is strictly scoped, continuously audited, and bound inherently to features you manually configure. Below is an exhaustive technical breakdown of what we ask for, and precisely why we ask for it:
+                </p>
+                
+                <div class="space-y-4 sm:space-y-6">
+
+                    <!-- Accessibility Service -->
+                    <div class="glass-card rounded-xl sm:rounded-2xl p-4 sm:p-6">
+                        <div class="flex items-center justify-between mb-2.5 sm:mb-3 flex-wrap gap-2">
+                            <h3 class="text-base sm:text-xl font-semibold text-blue-300 flex items-center gap-2">
+                                <span class="p-1.5 rounded-lg bg-blue-500/10 border border-blue-500/20 text-blue-400 text-sm sm:text-base" aria-hidden="true">🛠️</span>
+                                Accessibility Service API (BIND_ACCESSIBILITY_SERVICE)
+                            </h3>
+                            <span class="text-[10px] sm:text-xs px-2 py-0.5 sm:py-1 rounded-full bg-red-500/10 text-red-400 border border-red-500/20 font-semibold">Core Required Permission</span>
                         </div>
-                        <div>
-                            <span class="text-slate-400 block mb-0.5">Architect & Developer</span>
-                            <span class="text-slate-200 font-semibold">Madhusudan Payra</span>
+                        <p class="text-slate-300 text-xs sm:text-base leading-relaxed mb-3">
+                            The Accessibility Service API is undeniably the foundational engine and beating heart of Dynamic Edge Gesture Control. Without it, the application literally cannot function. While Android presents a frightening, highly generalized warning when enabling this service (claiming the app can "view your screen and observe your actions"), it is vital to understand the nuanced reality of how we implement it. It is strictly and exclusively utilized to:
+                        </p>
+                        <ul class="space-y-2 my-3 text-slate-300 text-xs sm:text-sm list-none pl-0">
+                            <li class="relative pl-5 before:absolute before:left-0 before:text-blue-400 before:content-['✦']"><strong>Draw and maintain touch-sensitive gesture overlay handles:</strong> This allows us to render invisible or translucent hitboxes (such as edge sliders along the bezel, dynamic notches at the top of the display, floating islands, and expanding radial pie menus) securely on top of all currently active screens, bypassing standard window manager limitations.</li>
+                            <li class="relative pl-5 before:absolute before:left-0 before:text-blue-400 before:content-['✦']"><strong>Analyze coordinate-specific touch events:</strong> We must meticulously calculate and detect your swipe vectors, tap velocities, long-press durations, and drag distances specifically and exclusively within these pre-configured edge handle zones. If you touch outside our handles, the Accessibility Service ignores the input entirely.</li>
+                            <li class="relative pl-5 before:absolute before:left-0 before:text-blue-400 before:content-['✦']"><strong>Execute global Android system actions:</strong> Once a valid gesture vector is recognized, the service dispatches global intents assigned to your gestures. This is how we programmatically trigger system-level commands like Back, Home, Recent Apps, expanding the Quick Settings panel, entering Split Screen mode, and invoking the hardware Power Menu without requiring a rooted device.</li>
+                        </ul>
+                        <div class="bg-red-500/10 border-l-2 sm:border-l-4 border-red-500 p-3 sm:p-4 rounded-r-xl mt-4 text-red-200 text-xs sm:text-sm leading-relaxed">
+                            <strong class="font-bold text-red-400 block mb-1">Strict Accessibility Privacy Guarantee:</strong>
+                            We solemnly swear that we do NOT use the Accessibility Service API to read your screen content, scrape text from your messaging apps, inspect your keyboard keystrokes, intercept banking passwords, or log personal communications. Our Accessibility node configuration is explicitly tuned to ignore view hierarchies and focus solely on spatial touch coordinates within our designated edge zones.
                         </div>
-                        <div>
-                            <span class="text-slate-400 block mb-0.5">Effective Legal Date</span>
-                            <span class="text-slate-200 font-semibold">September 23, 2026</span>
+                    </div>
+
+                    <!-- Foreground Services & System Maintenance -->
+                    <div class="glass-card rounded-xl sm:rounded-2xl p-4 sm:p-6">
+                        <h3 class="text-base sm:text-xl font-semibold text-blue-300 mb-2 sm:mb-3 flex items-center gap-2">
+                            <span class="p-1.5 rounded-lg bg-blue-500/10 border border-blue-500/20 text-blue-400 text-sm sm:text-base" aria-hidden="true">⚙️</span>
+                            Foreground Services & Complex Lifecycle Management
+                        </h3>
+                        <p class="text-slate-300 text-xs sm:text-sm leading-relaxed mb-3">
+                            Modern Android operating systems are incredibly aggressive when it comes to battery management and memory reclamation. To prevent the OS from arbitrarily killing the gesture engine while you are in the middle of a swipe, we must employ complex Foreground Services.
+                        </p>
+                        <ul class="space-y-3 text-xs sm:text-sm text-slate-300">
+                            <li><code class="text-blue-400 font-mono">FOREGROUND_SERVICE</code> & <code class="text-blue-400 font-mono">FOREGROUND_SERVICE_SPECIAL_USE</code>: These declarations mandate the OS to keep our gesture recognition algorithms alive in high-priority background memory. By tying the service to a persistent, user-visible notification, the system understands that terminating this process would actively disrupt the user's navigational experience.</li>
+                            <li><code class="text-blue-400 font-mono">FOREGROUND_SERVICE_CAMERA</code>: Introduced by stricter privacy rules in Android 14+, this specific foreground subtype is absolutely required when you trigger a flashlight toggle or a rapid camera gesture tool while our app is running as an active background service. Without this, the system throws a security exception.</li>
+                            <li><code class="text-blue-400 font-mono">FOREGROUND_SERVICE_MICROPHONE</code>: Similarly required by Android 14+, this is invoked uniquely and exclusively when a user binds an edge gesture to capture instant, covert voice memos. It guarantees that the OS knows exactly when the microphone is engaged from the background.</li>
+                            <li><code class="text-blue-400 font-mono">FOREGROUND_SERVICE_MEDIA_PLAYBACK</code>: This powers the offline media widget and the dynamic notch playback controls, allowing our overlays to intercept and display album art, track names, and playback state without halting when you lock the screen.</li>
+                            <li><code class="text-blue-400 font-mono">RECEIVE_BOOT_COMPLETED</code>: This allows the application to automatically re-initialize your active edge touch zones, floating panels, and background listeners the moment your device finishes booting up. Without this, you would have to manually open the app every time you restarted your phone.</li>
+                            <li><code class="text-blue-400 font-mono">WAKE_LOCK</code> & <code class="text-blue-400 font-mono">REQUEST_IGNORE_BATTERY_OPTIMIZATIONS</code>: We use partial wake locks to prevent the CPU's deep sleep routines from completely disconnecting the edge handle touch sensors. Furthermore, prompting the user to ignore battery optimizations is crucial for smooth, lag-free responsiveness during rapid sequential swipes.</li>
+                        </ul>
+                    </div>
+
+                    <!-- System Overlays & Settings -->
+                    <div class="glass-card rounded-xl sm:rounded-2xl p-4 sm:p-6">
+                        <h3 class="text-base sm:text-xl font-semibold text-blue-300 mb-2 sm:mb-3 flex items-center gap-2">
+                            <span class="p-1.5 rounded-lg bg-blue-500/10 border border-blue-500/20 text-blue-400 text-sm sm:text-base" aria-hidden="true">🪟</span>
+                            System Overlays, Haptics & Advanced Device Controls
+                        </h3>
+                        <p class="text-slate-300 text-xs sm:text-sm leading-relaxed mb-3">
+                            To truly customize the Android experience, our app must be capable of rendering graphics outside its own standard window constraints and interacting with fundamental hardware feedback mechanisms.
+                        </p>
+                        <ul class="space-y-3 text-xs sm:text-sm text-slate-300">
+                            <li><code class="text-blue-400 font-mono">SYSTEM_ALERT_WINDOW</code>: This is the critical "Draw over other apps" permission. It facilitates the rendering of floating gesture indicators, dynamic notch menus, and complex pie overlays perfectly on top of third-party applications, games, and the launcher. It is important to note that this permission strictly allows for UI rendering; it categorically cannot be used to inspect, record, or scrape the graphical elements of the applications situated beneath the overlay.</li>
+                            <li><code class="text-blue-400 font-mono">WRITE_SETTINGS</code>: A powerful system-level permission that allows your swipe actions to dynamically write to the secure settings provider. This enables instant toggling of system brightness sliders, volume overrides, automatic rotation locks, and custom display timeout intervals directly from a swipe gesture.</li>
+                            <li><code class="text-blue-400 font-mono">MODIFY_AUDIO_SETTINGS</code> & <code class="text-blue-400 font-mono">VIBRATE</code>: These allow the application to programmatically modify audio stream levels (media, ring, alarm) directly without opening the volume panel, and generates highly tuned, tactile haptic feedback pulses upon the successful completion of an edge swipe.</li>
+                            <li><code class="text-blue-400 font-mono">BLUETOOTH_CONNECT</code> & <code class="text-blue-400 font-mono">BLUETOOTH_SCAN</code>: These relatively new, hyper-specific permissions are used to directly toggle your device's Bluetooth radio states, initiate scans, and rapidly connect or disconnect from paired wireless headsets or smart accessories straight from your customized quick gesture pie menus.</li>
+                        </ul>
+                    </div>
+
+                    <!-- Location -->
+                    <div class="glass-card rounded-xl sm:rounded-2xl p-4 sm:p-6">
+                        <h3 class="text-base sm:text-xl font-semibold text-blue-300 mb-2 sm:mb-3 flex items-center gap-2">
+                            <span class="p-1.5 rounded-lg bg-blue-500/10 border border-blue-500/20 text-blue-400 text-sm sm:text-base" aria-hidden="true">📍</span>
+                            Location Services (Foreground & Background Geofencing)
+                        </h3>
+                        <p class="text-slate-300 text-xs sm:text-sm leading-relaxed mb-2">
+                            Required Declarations: <code class="text-blue-400 font-mono">ACCESS_FINE_LOCATION</code>, <code class="text-blue-400 font-mono">ACCESS_COARSE_LOCATION</code>, and the highly sensitive <code class="text-blue-400 font-mono">ACCESS_BACKGROUND_LOCATION</code>.
+                        </p>
+                        <p class="text-slate-300 text-xs sm:text-sm leading-relaxed">
+                            While a gesture control app requesting location might seem counterintuitive at first glance, it is employed exclusively and voluntarily for our advanced <strong>Situational Geofenced Triggers</strong>. For example, you may want to automatically disable all edge triggers when you arrive at a specific GPS coordinate (like your workplace) to prevent accidental swipes during meetings, or change the swipe actions when you arrive at the gym. We utilize the Android Geofencing API to set these spatial boundaries. Crucially, all geofence entry and exit events are evaluated entirely on your device's silicon. Your coordinates, movement history, and location profiles are absolutely never logged, transmitted to our servers, or shared with location brokers. It is a closed-loop system designed purely for local automation.
+                        </p>
+                    </div>
+
+                    <!-- Alarms & Notifications -->
+                    <div class="glass-card rounded-xl sm:rounded-2xl p-4 sm:p-6">
+                        <h3 class="text-base sm:text-xl font-semibold text-blue-300 mb-2 sm:mb-3 flex items-center gap-2">
+                            <span class="p-1.5 rounded-lg bg-blue-500/10 border border-blue-500/20 text-blue-400 text-sm sm:text-base" aria-hidden="true">🔔</span>
+                            Notifications, Do Not Disturb Intercepts & Precision Alarms
+                        </h3>
+                        <p class="text-slate-300 text-xs sm:text-sm leading-relaxed mb-3">
+                            To interface deeply with your device's alert states and scheduling capabilities, we require specific pathways to the notification manager and alarm manager.
+                        </p>
+                        <ul class="space-y-3 text-xs sm:text-sm text-slate-300">
+                            <li><code class="text-blue-400 font-mono">POST_NOTIFICATIONS</code>: A standard requirement in modern Android to post our mandatory foreground service notices (which keep the app alive) and to display rich, interactive media controls within the notification shade.</li>
+                            <li><code class="text-blue-400 font-mono">ACCESS_NOTIFICATION_POLICY</code>: This grants the application the authority to read your current interruption filter state and enables you to map rapid gestures to effortlessly toggle complex Do Not Disturb (DND) modes, including specific priority-only configurations.</li>
+                            <li><code class="text-blue-400 font-mono">SCHEDULE_EXACT_ALARM</code> & <code class="text-blue-400 font-mono">USE_EXACT_ALARM</code>: Unlike inexact alarms which the OS batches to save battery, these permissions allow for the hyper-precision scheduling of automated profile switches, delayed gesture macros, or custom reminder timers that must execute at the exact millisecond triggered by your initial gesture shortcut.</li>
+                        </ul>
+                    </div>
+
+                    <!-- Media, Camera, Mic & Screen Capture -->
+                    <div class="glass-card rounded-xl sm:rounded-2xl p-4 sm:p-6">
+                        <h3 class="text-base sm:text-xl font-semibold text-blue-300 mb-2 sm:mb-3 flex items-center gap-2">
+                            <span class="p-1.5 rounded-lg bg-blue-500/10 border border-blue-500/20 text-blue-400 text-sm sm:text-base" aria-hidden="true">📸</span>
+                            Camera, Microphone, Extensive Storage Access & Screen Capture
+                        </h3>
+                        <p class="text-slate-300 text-xs sm:text-sm leading-relaxed mb-3">
+                            These permissions grant access to the most sensitive hardware on your device. We request them strictly to enable robust, on-the-fly media creation and management through simple swipes.
+                        </p>
+                        <ul class="space-y-3 text-xs sm:text-sm text-slate-300">
+                            <li><code class="text-blue-400 font-mono">CAMERA</code>: We hook into the Camera2 API on demand specifically to rapidly toggle the device's LED flashlight module and to capture immediate, silent photo or video records when you trigger a mapped "Spy Cam" or "Quick Snap" gesture. The camera stream is never kept open longer than the exact duration of the capture.</li>
+                            <li><code class="text-blue-400 font-mono">RECORD_AUDIO</code>: This hardware pathway is activated only when executing a specific voice recording action assigned to an edge gesture. The raw audio buffer is immediately encoded and dumped to a local file.</li>
+                            <li><code class="text-blue-400 font-mono">READ_MEDIA_AUDIO</code>, <code class="text-blue-400 font-mono">READ_EXTERNAL_STORAGE</code>, & <code class="text-blue-400 font-mono">WRITE_EXTERNAL_STORAGE</code>: These storage APIs are comprehensively utilized to scan and load local music metadata for the audio controller widget, import custom icon images from your gallery to use in pie menus, and to securely serialize, save, and export encrypted backup JSON configuration files of your elaborate gesture setups.</li>
+                            <li><code class="text-blue-400 font-mono">LAUNCH_CAPTURE_CONTENT_ACTIVITY_ALLOWED</code>: This specific flag facilitates native Android screen capture intent invocations directly via configured gesture swipes, allowing you to take screenshots without pressing hardware buttons or relying entirely on the Accessibility Service's global action.</li>
+                        </ul>
+                        <div class="bg-emerald-500/10 border-l-2 sm:border-l-4 border-emerald-500 p-3 sm:p-4 rounded-r-xl mt-4 text-emerald-200 text-xs sm:text-sm leading-relaxed">
+                            <strong class="font-bold text-emerald-400 block mb-1">Inviolable Local Storage Privacy Guarantee:</strong>
+                            We guarantee unconditionally that all photographs, audio memos, video files, and screenshots captured through our shortcut triggers are systematically saved directly into your device's private sandboxed directories or your public media storage folders. Not a single byte of this media ever leaves your device's physical flash memory or is transmitted to our servers.
                         </div>
-                        <div>
-                            <span class="text-slate-400 block mb-0.5">Runtime Architecture</span>
-                            <span class="text-emerald-400 font-semibold">Local-First Sandbox (Zero-Server)</span>
+                    </div>
+
+                    <!-- Telephony, Contacts & Biometrics -->
+                    <div class="glass-card rounded-xl sm:rounded-2xl p-4 sm:p-6">
+                        <h3 class="text-base sm:text-xl font-semibold text-blue-300 mb-2 sm:mb-3 flex items-center gap-2">
+                            <span class="p-1.5 rounded-lg bg-blue-500/10 border border-blue-500/20 text-blue-400 text-sm sm:text-base" aria-hidden="true">📞</span>
+                            Direct Dialing, Address Book Contacts & Biometric Security
+                        </h3>
+                        <p class="text-slate-300 text-xs sm:text-sm leading-relaxed mb-3">
+                            To bridge the gap between gesture controls and human communication, we require permissions that interact with your phone's cellular capabilities and identity verification hardware.
+                        </p>
+                        <ul class="space-y-3 text-xs sm:text-sm text-slate-300">
+                            <li><code class="text-blue-400 font-mono">CALL_PHONE</code> & <code class="text-blue-400 font-mono">READ_CONTACTS</code>: This combination allows you to assign instant, direct speed-dial actions to a specific edge swipe (e.g., swipe down on the right edge to immediately call your partner). The address book is accessed locally, strictly to let you populate and select phone numbers inside the app's configuration UI. The contact list is never uploaded, synced, or analyzed off-device.</li>
+                            <li><code class="text-blue-400 font-mono">USE_BIOMETRIC</code> & <code class="text-blue-400 font-mono">USE_FINGERPRINT</code>: We utilize the Android BiometricPrompt API to protect the app's core settings menu and your private, in-app encrypted notes from unauthorized local access. When you authenticate, the verification occurs entirely within Android's hardware-backed Trusted Execution Environment (TEE) security enclave. Raw biometric templates (your actual fingerprint data) are deeply encrypted by the silicon and are mathematically impossible for our app, or any app, to access or read.</li>
+                        </ul>
+                    </div>
+
+                    <!-- App Process Security -->
+                    <div class="glass-card rounded-xl sm:rounded-2xl p-4 sm:p-6">
+                        <h3 class="text-base sm:text-xl font-semibold text-blue-300 mb-2 sm:mb-3 flex items-center gap-2">
+                            <span class="p-1.5 rounded-lg bg-blue-500/10 border border-blue-500/20 text-blue-400 text-sm sm:text-base" aria-hidden="true">🛡️</span>
+                            Internal Broadcast Receiver Security
+                        </h3>
+                        <p class="text-slate-300 text-xs sm:text-sm leading-relaxed">
+                            <code class="text-blue-400 font-mono">com.m.payra.gesture.control.app.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION</code>: This is an application-level signature permission we explicitly define. It acts as a cryptographic shield, ensuring that internal Intent broadcast communications between the app's various background services and foreground UI components cannot be intercepted, spoofed, or manipulated by malicious third-party apps installed on the same device. It guarantees that a rogue app cannot mimic a gesture trigger by sending a fake broadcast to our service.
+                        </p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Section 3: Hardware Features -->
+            <section id="hardware" class="policy-section glass-panel rounded-2xl sm:rounded-3xl p-5 sm:p-8 md:p-10 shadow-xl relative overflow-hidden">
+                <div class="absolute top-0 left-0 w-1 sm:w-1.5 h-full bg-gradient-to-b from-blue-500 to-indigo-500"></div>
+                <h2 class="text-lg sm:text-2xl font-bold text-slate-100 mb-3 sm:mb-4 flex items-center gap-2.5">
+                    <span class="text-blue-400 text-xs sm:text-sm font-extrabold uppercase tracking-widest bg-blue-500/10 px-2 py-0.5 sm:py-1 rounded-md border border-blue-500/20">03</span>
+                    Device Hardware Features & Rigorous Compatibility Mapping
+                </h2>
+                <div class="space-y-4 sm:space-y-5 text-slate-300 text-sm sm:text-base leading-relaxed">
+                    <p>
+                        Beyond software permissions, the Android OS requires applications to declare specific physical hardware dependencies in its manifest via <code>&lt;uses-feature&gt;</code> elements. These explicit declarations specify to the Google Play Store the exact physical capabilities required to support our extensive array of mapped gesture actions. Here is an exhaustive breakdown of the hardware we interact with:
+                    </p>
+                    
+                    <div class="glass-card rounded-xl p-4 sm:p-6 border border-slate-800 space-y-4 text-xs sm:text-sm">
+                        <p>• <strong>Telephony Subsystem (<code class="text-blue-400 font-mono">android.hardware.telephony</code>):</strong> This informs the OS that the device must have a cellular radio and baseband processor capable of making standard voice calls, enabling our speed-dial and emergency call gesture shortcuts to function properly.</p>
+                        <p>• <strong>Camera Optics & Autofocus Mechanics (<code class="text-blue-400 font-mono">android.hardware.camera</code>, <code class="text-blue-400 font-mono">camera.autofocus</code>):</strong> This ensures the device has a physical image sensor and the mechanical actuators required for autofocus, fully supporting our ability to invoke flashlight controls via the flash LED and execute quick, sharply focused photo capture triggers.</p>
+                        <p>• <strong>Audio Input Transducers (<code class="text-blue-400 font-mono">android.hardware.microphone</code>):</strong> This dictates the necessity of a physical microphone array, enabling our quick-action voice recording and audio memo shortcuts.</p>
+                        <p>• <strong>Bluetooth & Low Energy Radios (<code class="text-blue-400 font-mono">android.hardware.bluetooth</code>, <code class="text-blue-400 font-mono">bluetooth_le</code>):</strong> Required to programmatically toggle hardware wireless radios and seamlessly manage GATT connections to your low-energy accessories and audio peripherals.</p>
+                        <p>• <strong>Geospatial Location Sensors (<code class="text-blue-400 font-mono">android.hardware.location</code>, <code class="text-blue-400 font-mono">location.gps</code>, <code class="text-blue-400 font-mono">location.network</code>):</strong> Declares the need for physical GPS receiver chips and Wi-Fi/Cellular network triangulation capabilities, which act as the core engine powering our situational geofence profile triggers.</p>
+                        <p>• <strong>Advanced Touch Emulation (<code class="text-blue-400 font-mono">android.hardware.faketouch</code>):</strong> An important technical declaration that ensures our basic drag, swipe, and multi-touch gesture recognition functions remain fully operational and accurately mapped across a much wider variety of non-standard touch screens, styluses, and simulated pointer devices, rather than failing on devices lacking a traditional capacitive screen.</p>
+                    </div>
+
+                    <p class="text-xs text-slate-400 bg-slate-900/50 p-3 rounded-lg">
+                        <em>Crucial Compatibility Note: All hardware features are utilized dynamically and conditionally at runtime. We employ strict `required="false"` manifest flags where appropriate. If your specific device lacks certain physical hardware (such as attempting to run the app on a Wi-Fi-only tablet that lacks cellular calling capabilities), those specific actions are gracefully caught, disabled in the UI, and logged locally, while all other unrelated gestures remain entirely and fully operational.</em>
+                    </p>
+                </div>
+            </section>
+
+            <!-- Section 4: Package Visibility -->
+            <section id="packages" class="policy-section glass-panel rounded-2xl sm:rounded-3xl p-5 sm:p-8 md:p-10 shadow-xl relative overflow-hidden">
+                <div class="absolute top-0 left-0 w-1 sm:w-1.5 h-full bg-gradient-to-b from-blue-500 to-indigo-500"></div>
+                <h2 class="text-lg sm:text-2xl font-bold text-slate-100 mb-3 sm:mb-4 flex items-center gap-2.5">
+                    <span class="text-blue-400 text-xs sm:text-sm font-extrabold uppercase tracking-widest bg-blue-500/10 px-2 py-0.5 sm:py-1 rounded-md border border-blue-500/20">04</span>
+                    Comprehensive Package Visibility (QUERY_ALL_PACKAGES Policy)
+                </h2>
+                <div class="space-y-4 sm:space-y-5 text-slate-300 text-sm sm:text-base leading-relaxed">
+                    <p>
+                        Dynamic Edge Gesture Control fundamentally relies on declaring the <code class="text-blue-400 font-mono">android.permission.QUERY_ALL_PACKAGES</code> permission. In recent Android iterations (Android 11 and above), Google introduced strict package visibility filtering, meaning apps can no longer see other installed apps by default. In accordance with Google Play's stringent High-Risk Permission policy, we have successfully justified that this broad visibility is strictly, undeniably required for the core, intended functionality of the application to exist:
+                    </p>
+                    <ul class="space-y-3 list-disc list-inside text-xs sm:text-sm text-slate-300 pl-2">
+                        <li><strong>Universal App Launch Gestures & Intent Resolution:</strong> To allow you to map absolutely any installed application on your device to a swipe gesture, notch menu item, floating bubble dock, or radial pie menu, our app must be able to query the PackageManager for an exhaustive list of all launchable intents. Without this permission, we would be blind to your installed apps, making custom app-launching impossible.</li>
+                        <li><strong>Intelligent Per-App Gesture Blacklists / Exclusion Profiles:</strong> One of our most powerful features allows the app to dynamically detect when specific foreground apps (such as camera viewfinders, immersive full-screen video games, or sensitive drawing canvases) are brought into focus. By querying the package name of the active window, we can automatically and instantly suppress our edge touch triggers to avoid catastrophic accidental touches during critical moments. We cannot filter what we cannot see.</li>
+                    </ul>
+                    <div class="bg-red-500/10 border-l-2 sm:border-l-4 border-red-500 p-4 sm:p-5 rounded-r-xl text-red-200 text-xs sm:text-sm leading-relaxed mt-4">
+                        <strong class="text-red-400 text-base mb-2 block">Absolute Package Visibility Privacy Commitment:</strong> 
+                        The complete inventory of your installed applications, their package names, and their usage states is queried, processed, and evaluated strictly on your local device hardware using on-the-fly memory structures. We fundamentally do not catalog, serialize, transmit, upload, or monetize the list of applications installed on your device. Your app drawer is your private business, and our code treats it as highly volatile, localized data that is never written to an external network socket.
+                    </div>
+                </div>
+            </section>
+
+            <!-- Section 5: Advertising & Crash Diagnostics -->
+            <section id="ads-analytics" class="policy-section glass-panel rounded-2xl sm:rounded-3xl p-5 sm:p-8 md:p-10 shadow-xl relative overflow-hidden">
+                <div class="absolute top-0 left-0 w-1 sm:w-1.5 h-full bg-gradient-to-b from-amber-500 to-orange-500"></div>
+                <h2 class="text-lg sm:text-2xl font-bold text-slate-100 mb-3 sm:mb-4 flex items-center gap-2.5">
+                    <span class="text-amber-400 text-xs sm:text-sm font-extrabold uppercase tracking-widest bg-amber-500/10 px-2 py-0.5 sm:py-1 rounded-md border border-amber-500/20">05</span>
+                    Advertising SDKs & Telemetric Crash Diagnostics
+                </h2>
+                <div class="space-y-4 sm:space-y-5 text-slate-300 text-sm sm:text-base leading-relaxed">
+                    <p>
+                        To sustainably support the intensive, ongoing development of this application while simultaneously offering a vast array of core features completely free of charge, our application securely implements and connects to heavily vetted, industry-standard Google AdMob and Google Firebase services. Here is exactly how they operate within our sandbox:
+                    </p>
+                    
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6 my-5">
+                        <div class="glass-card p-5 rounded-xl border border-slate-800 shadow-inner">
+                            <h4 class="text-amber-300 text-sm sm:text-base font-bold mb-2 flex items-center gap-2">
+                                <span>📢</span> Advertising & Privacy Sandbox
+                            </h4>
+                            <p class="text-xs sm:text-sm text-slate-300 leading-relaxed mb-3">
+                                Required Manifest Permissions: <code class="text-amber-400 font-mono text-[10px]">com.google.android.gms.permission.AD_ID</code>, <code class="text-amber-400 font-mono text-[10px]">ACCESS_ADSERVICES_AD_ID</code>, <code class="text-amber-400 font-mono text-[10px]">ACCESS_ADSERVICES_ATTRIBUTION</code>, <code class="text-amber-400 font-mono text-[10px]">ACCESS_ADSERVICES_TOPICS</code>, and <code class="text-amber-400 font-mono text-[10px]">BIND_GET_INSTALL_REFERRER_SERVICE</code>.
+                            </p>
+                            <p class="text-xs text-slate-400 leading-relaxed">
+                                Google AdMob utilizes these specific advertising identifiers (a unique, resettable string of characters provided by Google Play Services) to participate in programmatic ad bidding. This allows the SDK to serve either contextually relevant advertisements or optional, user-initiated rewarded video ads to unlock premium features temporarily. We have actively integrated with the new Android Privacy Sandbox to ensure attribution and topic generation happens locally. You maintain total control and can completely opt out of personalized profiling or instantly reset your Advertising ID at any time directly via your Android OS Settings menu: navigate to <code>Settings &rarr; Google &rarr; Ads &rarr; Reset advertising ID</code>.
+                            </p>
+                        </div>
+
+                        <div class="glass-card p-5 rounded-xl border border-slate-800 shadow-inner">
+                            <h4 class="text-amber-300 text-sm sm:text-base font-bold mb-2 flex items-center gap-2">
+                                <span>📊</span> Firebase Diagnostics & Network State
+                            </h4>
+                            <p class="text-xs sm:text-sm text-slate-300 leading-relaxed mb-3">
+                                Required Manifest Permissions: <code class="text-amber-400 font-mono text-[10px]">INTERNET</code> and <code class="text-amber-400 font-mono text-[10px]">ACCESS_NETWORK_STATE</code>.
+                            </p>
+                            <p class="text-xs text-slate-400 leading-relaxed">
+                                These fundamental networking permissions strictly power communication with Google Firebase Crashlytics. When our application encounters a fatal error, unhandled exception, or anomalous memory leak, Crashlytics automatically generates a highly obfuscated, anonymized stack trace (a raw text log of which line of code failed). This stack trace is transmitted so we can patch the bug in the next update. Furthermore, the network state permission is used solely to check if you have an active internet connection prior to attempting to load rewarded ads, preventing unnecessary CPU wake-ups and saving your battery.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="p-5 sm:p-6 rounded-xl sm:rounded-2xl bg-amber-500/10 border border-amber-500/20 text-amber-200 mt-6 shadow-lg">
+                        <h4 class="font-bold text-amber-300 text-sm sm:text-base mb-3 flex items-center gap-2">
+                            <span>🔗</span> External Privacy Policies of Integrated Third-Party SDKs:
+                        </h4>
+                        <p class="text-xs sm:text-sm text-amber-100/70 mb-4">
+                            We highly encourage you to review the massive, overarching privacy frameworks that govern the third-party libraries we compile into our application. They operate under Google's stringent global compliance standards.
+                        </p>
+                        <div class="flex flex-wrap gap-3 text-xs font-medium">
+                            <a href="https://policies.google.com/technologies/ads" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 px-4 py-2.5 rounded-lg bg-amber-500/20 text-amber-300 border border-amber-500/30 hover:bg-amber-500 hover:text-slate-950 transition-all text-xs sm:text-sm shadow-md">
+                                <span>Google Ad Technologies & Policies</span>
+                                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/></svg>
+                            </a>
+                            <a href="https://firebase.google.com/support/privacy" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 px-4 py-2.5 rounded-lg bg-amber-500/20 text-amber-300 border border-amber-500/30 hover:bg-amber-500 hover:text-slate-950 transition-all text-xs sm:text-sm shadow-md">
+                                <span>Firebase Deep Privacy & Security Terms</span>
+                                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/></svg>
+                            </a>
                         </div>
                     </div>
                 </div>
+            </section>
 
-                <!-- 01. Overview & Foundational Architecture -->
-                <section id="overview" class="content-section space-y-6">
-                    <div class="flex items-center gap-3">
-                        <span class="text-xs font-mono text-blue-400 font-bold tracking-widest uppercase">Section 01</span>
-                        <div class="h-px bg-slate-800 flex-1"></div>
-                    </div>
-                    <h2 class="text-2xl font-bold text-slate-100">Foundational Architecture & The Local-First Processing Model</h2>
-                    
+            <!-- Section 6: In-App Purchases & Licensing -->
+            <section id="billing" class="policy-section glass-panel rounded-2xl sm:rounded-3xl p-5 sm:p-8 md:p-10 shadow-xl relative overflow-hidden">
+                <div class="absolute top-0 left-0 w-1 sm:w-1.5 h-full bg-gradient-to-b from-blue-500 to-indigo-500"></div>
+                <h2 class="text-lg sm:text-2xl font-bold text-slate-100 mb-3 sm:mb-4 flex items-center gap-2.5">
+                    <span class="text-blue-400 text-xs sm:text-sm font-extrabold uppercase tracking-widest bg-blue-500/10 px-2 py-0.5 sm:py-1 rounded-md border border-blue-500/20">06</span>
+                    In-App Purchases, Cryptographic Licensing & Google Play Billing
+                </h2>
+                <div class="space-y-4 sm:space-y-5 text-slate-300 text-sm sm:text-base leading-relaxed">
                     <p>
-                        In an era dominated by cloud-tethered software paradigms where user telemetry, configuration state, and contextual hardware interactions are routinely harvested, synchronized, aggregated, and monetized within centralized relational databases, <strong>Dynamic Edge Gesture Control</strong> explicitly repudiates this computational philosophy. The entirety of this software system is engineered from the ground up to adhere to the rigorous principles of the <strong>Strict Local-First Computation Protocol</strong>.
+                        The application offers a variety of optional Pro features, cosmetic upgrades, and advanced configuration limits through the robust infrastructure of Google Play (requiring the manifest permissions: <code class="text-blue-400 font-mono">com.android.vending.BILLING</code> and <code class="text-blue-400 font-mono">com.android.vending.CHECK_LICENSE</code>). The financial architecture is designed to completely insulate the developer from your sensitive financial data.
                     </p>
-                    <p>
-                        Every computational heuristic, touch boundary calculation, coordinate projection matrix, gesture recognition classifier, notch bounding-box interceptor, radial pie menu layout generator, and encrypted local note storage engine operates <strong>entirely within the volatile Random Access Memory (RAM) and isolated application sandbox directory allocated strictly to our Linux User Identifier (UID) by the Android operating system</strong>. At no juncture in the software's execution lifecycle are your gesture habits, shortcut selections, personal configuration files, screen coordinate histories, or private notes serialized into external packets for transmission to any proprietary, private, or developer-operated remote server.
-                    </p>
-
-                    <div class="border border-slate-800 rounded-xl bg-gradient-to-br from-[#0d131f] to-[#111927] p-6 space-y-4">
-                        <h3 class="text-sm font-semibold text-slate-100 flex items-center gap-2">
-                            <svg class="w-4 h-4 text-emerald-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg>
-                            Core Technical Guarantees of the Zero-Telemetry Kernel
-                        </h3>
-                        <ul class="space-y-2.5 text-xs text-slate-300 list-disc list-inside">
-                            <li><strong class="text-slate-200">Absence of Developer Remote Infrastructure:</strong> The developer does not deploy, operate, manage, rent, lease, or route traffic through any proprietary backend servers, virtual private servers (VPS), AWS/GCP cloud clusters, or PostgreSQL/MySQL/MongoDB databases for user record retention.</li>
-                            <li><strong class="text-slate-200">Zero Authentication Barriers:</strong> The software contains no user account registry, email registration module, OAuth login flow, phone number validation handshake, or persistent user profiling identifier. You launch the app and consume utility instantly without surrendering digital identity markers.</li>
-                            <li><strong class="text-slate-200">Volatile State Transience:</strong> Raw screen coordinates ($x, y$ cartesian pixel values) generated during edge swipes, notch taps, and touch interactions are evaluated strictly in volatile RAM, translated into an internal action intent (e.g., <code class="text-slate-200">GLOBAL_ACTION_BACK</code>), and immediately dropped from memory without leaving forensic traces on flash storage.</li>
-                            <li><strong class="text-slate-200">Strict Cryptographic Offline Enclave:</strong> The optional "Quick Notes" and "Media Vault" features store records purely within the application's internal sandboxed directory (<code class="text-slate-200 font-mono">/data/user/0/com.m.payra.gesture.control.app/</code>) guarded by the Android Linux kernel's multi-user discretionary access control (DAC).</li>
-                        </ul>
-                    </div>
-                </section>
-
-                <!-- 02. Comprehensive Lexicon -->
-                <section id="definitions" class="content-section space-y-6">
-                    <div class="flex items-center gap-3">
-                        <span class="text-xs font-mono text-blue-400 font-bold tracking-widest uppercase">Section 02</span>
-                        <div class="h-px bg-slate-800 flex-1"></div>
-                    </div>
-                    <h2 class="text-2xl font-bold text-slate-100">Statutory Lexicon & Architectural Terminology</h2>
-                    
-                    <p class="text-slate-400 text-xs">
-                        To maintain total precision and preclude ambiguities during legal review, regulatory audit, or technical source-code verification, the following terms are defined in accordance with internationally recognized standards:
-                    </p>
-
-                    <div class="space-y-3 font-mono text-xs">
-                        <div class="border border-slate-800/80 bg-[#0d131f] p-4 rounded-lg">
-                            <span class="text-blue-400 font-bold block mb-1">AccessibilityNodeInfo & AccessibilityEvent</span>
-                            <p class="text-slate-400 font-sans text-xs leading-normal">
-                                The official Android framework classes representing the hierarchical view tree and interactive UI state transitions of an active application. While the operating system transmits these objects to enabled accessibility services, Dynamic Edge Gesture Control specifically ignores the text payload, content descriptions, input text buffers, and password values contained within these structures.
-                            </p>
-                        </div>
-
-                        <div class="border border-slate-800/80 bg-[#0d131f] p-4 rounded-lg">
-                            <span class="text-blue-400 font-bold block mb-1">Sandboxed Internal Storage</span>
-                            <p class="text-slate-400 font-sans text-xs leading-normal">
-                                A dedicated, hardware-encrypted directory on the device's physical non-volatile flash storage assigned exclusively to our app by the Linux kernel security manager. No other third-party application installed on the operating system possesses read, write, or traversal permissions over this directory without explicit root access.
-                            </p>
-                        </div>
-
-                        <div class="border border-slate-800/80 bg-[#0d131f] p-4 rounded-lg">
-                            <span class="text-blue-400 font-bold block mb-1">Foreground Service Execution</span>
-                            <p class="text-slate-400 font-sans text-xs leading-normal">
-                                A specialized Android system execution state marked by a permanent, non-dismissible notification that grants the application persistent operational privileges in RAM, thereby immunizing its edge touch detection hooks from aggressive operating system low-memory-killer (LMK) eviction algorithms.
-                            </p>
-                        </div>
-
-                        <div class="border border-slate-800/80 bg-[#0d131f] p-4 rounded-lg">
-                            <span class="text-blue-400 font-bold block mb-1">Pseudonymous Telemetry</span>
-                            <p class="text-slate-400 font-sans text-xs leading-normal">
-                                Machine-generated diagnostics, including stack traces, device hardware vendor strings, OS API levels, and resettable Google Advertising Identifiers (GAID), which facilitate statistical aggregation and troubleshooting without associating records with a verifiable human name, physical address, or national ID number.
-                            </p>
-                        </div>
-                    </div>
-                </section>
-
-                <!-- 03. Google Play Data Safety Matrix -->
-                <section id="data-safety" class="content-section space-y-6">
-                    <div class="flex items-center gap-3">
-                        <span class="text-xs font-mono text-blue-400 font-bold tracking-widest uppercase">Section 03</span>
-                        <div class="h-px bg-slate-800 flex-1"></div>
-                    </div>
-                    <h2 class="text-2xl font-bold text-slate-100">Google Play Data Safety Matrix & Granular Handling Specification</h2>
-                    
-                    <p>
-                        In strict compliance with Google Play's User Data Policy and the required Data Safety questionnaire disclosures, this section details every distinct category of user data, its handling mechanism, whether it is transmitted off-device, and the exact legal/technical justification governing its processing.
-                    </p>
-
-                    <div class="border border-slate-800 rounded-xl overflow-hidden bg-[#0b0f19]">
-                        <div class="overflow-x-auto">
-                            <table class="w-full text-left text-xs border-collapse">
-                                <thead class="bg-[#0f172a] text-slate-200 border-b border-slate-800 font-mono">
-                                    <tr>
-                                        <th class="p-3.5 whitespace-nowrap">Data Classification</th>
-                                        <th class="p-3.5 whitespace-nowrap">Runtime Handling Agent</th>
-                                        <th class="p-3.5 whitespace-nowrap">Transit Boundary</th>
-                                        <th class="p-3.5 whitespace-nowrap">Storage Persistence</th>
-                                        <th class="p-3.5">Specific Purpose & Functional Justification</th>
-                                    </tr>
-                                </thead>
-                                <tbody class="divide-y divide-slate-800/60 font-sans">
-                                    <tr class="hover:bg-slate-900/40 transition-colors">
-                                        <td class="p-3.5 font-medium text-slate-200">Installed Application Inventory</td>
-                                        <td class="p-3.5 font-mono text-blue-400">PackageManager / Local OS</td>
-                                        <td class="p-3.5 font-mono text-emerald-400">0 Bytes Transmitted (Local Only)</td>
-                                        <td class="p-3.5 text-slate-400">Volatile RAM / App Sandbox</td>
-                                        <td class="p-3.5 text-slate-300">Enables user assignment of shortcuts to edge drawers and powers situational gesture suppression over blacklisted fullscreen apps (e.g., games/camera).</td>
-                                    </tr>
-                                    <tr class="hover:bg-slate-900/40 transition-colors">
-                                        <td class="p-3.5 font-medium text-slate-200">Touch Intercept Coordinates ($x, y$)</td>
-                                        <td class="p-3.5 font-mono text-blue-400">Accessibility Service / View Overlay</td>
-                                        <td class="p-3.5 font-mono text-emerald-400">0 Bytes Transmitted (Local Only)</td>
-                                        <td class="p-3.5 text-slate-400">Transient (Discarded in &lt;16ms)</td>
-                                        <td class="p-3.5 text-slate-300">Required exclusively to evaluate gesture velocity, swipe direction, and notch tap boundaries. Never written to disk or recorded.</td>
-                                    </tr>
-                                    <tr class="hover:bg-slate-900/40 transition-colors">
-                                        <td class="p-3.5 font-medium text-slate-200">Voice Memos & Audio Buffers</td>
-                                        <td class="p-3.5 font-mono text-blue-400">AudioRecord / MediaRecorder API</td>
-                                        <td class="p-3.5 font-mono text-emerald-400">0 Bytes Transmitted (Local Only)</td>
-                                        <td class="p-3.5 text-slate-400">Local Sandboxed Flash Storage</td>
-                                        <td class="p-3.5 text-slate-300">Generated purely upon explicit user gesture triggers mapping to "Quick Voice Memo". Audio is encoded directly to local file storage and never streamed.</td>
-                                    </tr>
-                                    <tr class="hover:bg-slate-900/40 transition-colors">
-                                        <td class="p-3.5 font-medium text-slate-200">Quick Photo Captures</td>
-                                        <td class="p-3.5 font-mono text-blue-400">CameraX / Hardware Camera2</td>
-                                        <td class="p-3.5 font-mono text-emerald-400">0 Bytes Transmitted (Local Only)</td>
-                                        <td class="p-3.5 text-slate-400">Isolated App Storage</td>
-                                        <td class="p-3.5 text-slate-300">Dispatched exclusively when the user assigns a fast capture action to a gesture trigger. Images remain in the private vault unless manually exported.</td>
-                                    </tr>
-                                    <tr class="hover:bg-slate-900/40 transition-colors">
-                                        <td class="p-3.5 font-medium text-slate-200">Contact Records (Speed Dial)</td>
-                                        <td class="p-3.5 font-mono text-blue-400">Android ContentResolver API</td>
-                                        <td class="p-3.5 font-mono text-emerald-400">0 Bytes Transmitted (Local Only)</td>
-                                        <td class="p-3.5 text-slate-400">Private Preferences (Selected Only)</td>
-                                        <td class="p-3.5 text-slate-300">Queried solely on-demand during configuration to bind a single contact's URI to a radial dock button or quick-call gesture.</td>
-                                    </tr>
-                                    <tr class="hover:bg-slate-900/40 transition-colors">
-                                        <td class="p-3.5 font-medium text-slate-200">Coarse / Fine Geolocation</td>
-                                        <td class="p-3.5 font-mono text-blue-400">GeofencingClient / LocationManager</td>
-                                        <td class="p-3.5 font-mono text-emerald-400">0 Bytes Transmitted (Local Only)</td>
-                                        <td class="p-3.5 text-slate-400">Volatile OS Geofence Subsystem</td>
-                                        <td class="p-3.5 text-slate-300">Monitors hardware geofence transitions to automatically switch gesture profiles (e.g., Office profile vs. Driving profile). Handled entirely by OS hardware registers.</td>
-                                    </tr>
-                                    <tr class="hover:bg-slate-900/40 transition-colors">
-                                        <td class="p-3.5 font-medium text-slate-200">Crash & Exception Stack Traces</td>
-                                        <td class="p-3.5 font-mono text-amber-400">Firebase Crashlytics SDK</td>
-                                        <td class="p-3.5 font-mono text-amber-400">Encrypted (TLS 1.3 Outbound)</td>
-                                        <td class="p-3.5 text-slate-400">Google Cloud Servers (90 Days)</td>
-                                        <td class="p-3.5 text-slate-300">Facilitates crash triage, ANR (Application Not Responding) diagnostics, and operating system version compatibility monitoring.</td>
-                                    </tr>
-                                    <tr class="hover:bg-slate-900/40 transition-colors">
-                                        <td class="p-3.5 font-medium text-slate-200">Google Advertising ID (GAID)</td>
-                                        <td class="p-3.5 font-mono text-amber-400">Google Mobile Ads (AdMob) SDK</td>
-                                        <td class="p-3.5 font-mono text-amber-400">Encrypted (TLS 1.3 Outbound)</td>
-                                        <td class="p-3.5 text-slate-400">Google Ad Infrastructure</td>
-                                        <td class="p-3.5 text-slate-300">Used by Google AdMob to deliver interstitial, banner, and rewarded advertisements, prevent fraudulent ad clicks, and compute attribution metrics.</td>
-                                    </tr>
-                                    <tr class="hover:bg-slate-900/40 transition-colors">
-                                        <td class="p-3.5 font-medium text-slate-200">In-App Purchase Receipts</td>
-                                        <td class="p-3.5 font-mono text-amber-400">Google Play Billing Library</td>
-                                        <td class="p-3.5 font-mono text-amber-400">Encrypted (TLS 1.3 Outbound)</td>
-                                        <td class="p-3.5 text-slate-400">Google Play Account Database</td>
-                                        <td class="p-3.5 text-slate-300">Cryptographically validates whether the user holds a legitimate Pro License token. Financial records and credit cards are handled exclusively by Google Play.</td>
-                                    </tr>
-                                </tbody>
-                            </table>
-                        </div>
-                    </div>
-                </section>
-
-                <!-- 04. Accessibility Service Isolation -->
-                <section id="accessibility" class="content-section space-y-6">
-                    <div class="flex items-center gap-3">
-                        <span class="text-xs font-mono text-blue-400 font-bold tracking-widest uppercase">Section 04</span>
-                        <div class="h-px bg-slate-800 flex-1"></div>
-                    </div>
-                    <h2 class="text-2xl font-bold text-slate-100">The Android Accessibility Service (BIND_ACCESSIBILITY_SERVICE) Protocol</h2>
-                    
-                    <div class="border border-amber-500/30 bg-amber-500/5 p-5 rounded-xl space-y-3">
-                        <div class="flex items-center gap-2 text-amber-400 font-mono text-xs font-bold uppercase tracking-wider">
-                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"/></svg>
-                            Prominent Legal Disclosure Under Google Play Policy
-                        </div>
-                        <p class="text-xs text-slate-300 leading-relaxed">
-                            Dynamic Edge Gesture Control requires the declaration and activation of an Android Accessibility Service. In compliance with the Google Play Accessibility API Policy, users are hereby explicitly, prominently, and unequivocally informed regarding the exact operational constraints and technical boundaries of this service.
-                        </p>
-                    </div>
-
-                    <h3 class="text-base font-semibold text-slate-200">1. Why Accessibility Is Technically Required</h3>
-                    <p>
-                        In the Android security sandbox architecture, standard user-space applications are strictly barred from performing system-level navigation injections (such as triggering an operating-system-wide <em>Back</em> navigation, transitioning to the <em>Home Screen</em>, displaying the <em>Recent Apps</em> task switcher, pulling down the <em>Notification Shade</em>, opening <em>Quick Settings</em>, triggering <em>Split Screen</em>, or commanding the device to display the <em>Power Menu</em>) without holding elevated system privileges or root access.
-                    </p>
-                    <p>
-                        The Android Accessibility API provides the official, secure framework (<code class="text-slate-200 font-mono">performGlobalAction()</code>) enabling our software to execute these precise system primitives reliably across all supported Android versions without tampering with operating system firmware.
-                    </p>
-
-                    <h3 class="text-base font-semibold text-slate-200">2. Technical Confinement & Content Rejection Safeguards</h3>
-                    <p>
-                        While the underlying Android Accessibility Service pipeline possesses the technical capacity to deliver serialized window content to connected services, Dynamic Edge Gesture Control enforces hardcoded structural isolation within its service implementation:
-                    </p>
-                    <ul class="space-y-3 text-xs text-slate-300 list-disc list-inside">
-                        <li><strong class="text-slate-100 font-mono">Zero Text Node Inspection:</strong> Our service entirely suppresses the inspection of <code class="text-slate-200 font-mono">AccessibilityNodeInfo.getText()</code>, <code class="text-slate-200 font-mono">getContentDescription()</code>, or child view hierarchies. It cannot read text typed into chat applications, emails, banking interfaces, search bars, or web browsers.</li>
-                        <li><strong class="text-slate-100 font-mono">Absolute Keylogging Protection:</strong> The application does not declare the flag to monitor hardware or soft keypress events (<code class="text-slate-200 font-mono">FLAG_REQUEST_FILTER_KEY_EVENTS</code> is excluded from the accessibility configuration XML). It is physically and programmatically impossible for the service to record keystrokes, passwords, two-factor pins, or credentials.</li>
-                        <li><strong class="text-slate-100 font-mono">Touch Boundary Confinement:</strong> Touch intercepts are restricted exclusively to ultra-thin edge zones (e.g., 8–24 pixels along screen margins) and the designated camera cutout perimeter. Once a swipe moves into the primary viewport area, coordinate consumption terminates, handing complete touch supremacy back to the foreground application.</li>
+                    <ul class="space-y-4 list-disc list-inside text-xs sm:text-sm text-slate-300 ml-2">
+                        <li><strong>Impenetrable Payment Security:</strong> All financial transactions, token generations, and card authentications are processed exclusively, entirely, and securely through the Google Play Billing Library. The developer (Madhusudan Payra) literally never receives, accesses, touches, or retains your credit card details, CVV numbers, banking info, or physical billing address. We rely entirely on Google's massive server infrastructure to handle the fiat currency.</li>
+                        <li><strong>Cryptographic License Validation:</strong> When you purchase a Pro upgrade, Google Play passes a highly secure, mathematically signed cryptographic receipt token back to our application. The app parses this token locally to confirm your Pro status and unlock the premium UI elements without needing to establish a persistent connection to an independent licensing server.</li>
+                        <li><strong>Automated Refunds & Subscriptions:</strong> All disputes, buyer's remorse refunds, and subscription cancellations are managed entirely through the Google Play Store client interface according to Google's standard, universally applied refund and cancellation policies. We cannot manually charge your card or prevent you from canceling a subscription.</li>
                     </ul>
-                </section>
+                </div>
+            </section>
 
-                <!-- 05. Window Management & Overlays -->
-                <section id="overlays" class="content-section space-y-6">
-                    <div class="flex items-center gap-3">
-                        <span class="text-xs font-mono text-blue-400 font-bold tracking-widest uppercase">Section 05</span>
-                        <div class="h-px bg-slate-800 flex-1"></div>
-                    </div>
-                    <h2 class="text-2xl font-bold text-slate-100">Window Management, Screen Overlays & Touch Injection</h2>
-                    
+            <!-- Section 7: Security & Data Deletion -->
+            <section id="security" class="policy-section glass-panel rounded-2xl sm:rounded-3xl p-5 sm:p-8 md:p-10 shadow-xl relative overflow-hidden">
+                <div class="absolute top-0 left-0 w-1 sm:w-1.5 h-full bg-gradient-to-b from-blue-500 to-indigo-500"></div>
+                <h2 class="text-lg sm:text-2xl font-bold text-slate-100 mb-3 sm:mb-4 flex items-center gap-2.5">
+                    <span class="text-blue-400 text-xs sm:text-sm font-extrabold uppercase tracking-widest bg-blue-500/10 px-2 py-0.5 sm:py-1 rounded-md border border-blue-500/20">07</span>
+                    Data Retention, Sandboxed Deletion, & Transit Security
+                </h2>
+                <div class="space-y-4 sm:space-y-5 text-slate-300 text-sm sm:text-base leading-relaxed">
                     <p>
-                        To construct responsive tactile edge triggers, dynamic camera notch status rings, and radial pie menus, the application relies on the system windowing manager through specific permissions:
+                        <strong>Unbreakable Encryption in Transit:</strong> Although our application relies on local processing, the minimal necessary communications it does make (specifically, sending crash logs to Firebase or requesting ads from AdMob endpoints) use the highest standard of secure TLS/HTTPS cryptographic protocols. Man-in-the-middle attacks attempting to intercept these analytics packets will merely yield useless, encrypted cipher text.
                     </p>
-
-                    <div class="space-y-4">
-                        <div class="border border-slate-800 bg-[#0d131f] p-5 rounded-xl space-y-2">
-                            <div class="flex items-center justify-between font-mono text-xs">
-                                <span class="text-blue-400 font-bold">android.permission.SYSTEM_ALERT_WINDOW</span>
-                                <span class="text-slate-400 border border-slate-700 px-2 py-0.5 rounded text-[10px]">WindowManager.LayoutParams</span>
-                            </div>
-                            <p class="text-xs text-slate-300 leading-relaxed">
-                                This permission allows the app to instantiate floating views utilizing the system window type <code class="text-slate-200 font-mono">TYPE_APPLICATION_OVERLAY</code>. These views form the physical UI anchors of the edge handles and notch indicators.
-                            </p>
-                            <div class="text-[11px] text-slate-400 border-t border-slate-800/80 pt-3 space-y-1 font-mono">
-                                <div>• <strong>FLAG_NOT_FOCUSABLE:</strong> Ensures that touch focus is only seized within designated interaction zones, preventing the overlay from blocking keyboard inputs in underlying apps.</div>
-                                <div>• <strong>Zero Screen Capture:</strong> The overlay contains no functionality to invoke the <code class="text-slate-300">MediaProjection</code> API. It cannot screenshot or record the visual contents of apps running beneath it.</div>
-                            </div>
-                        </div>
-
-                        <div class="border border-slate-800 bg-[#0d131f] p-5 rounded-xl space-y-2">
-                            <div class="flex items-center justify-between font-mono text-xs">
-                                <span class="text-blue-400 font-bold">android.permission.INTERNAL_SYSTEM_WINDOW (Not Declared)</span>
-                                <span class="text-emerald-400 border border-emerald-500/30 px-2 py-0.5 rounded text-[10px]">Secure Sandbox Verified</span>
-                            </div>
-                            <p class="text-xs text-slate-300 leading-relaxed">
-                                The application does not exploit private OEM signatures or unauthorized system window hooks. All overlay layers exist within standard user-space constraints established by Android 8.0 (API 26) through Android 15+.
-                            </p>
-                        </div>
-                    </div>
-                </section>
-
-                <!-- 06. Persistence & Foreground Execution -->
-                <section id="background" class="content-section space-y-6">
-                    <div class="flex items-center gap-3">
-                        <span class="text-xs font-mono text-blue-400 font-bold tracking-widest uppercase">Section 06</span>
-                        <div class="h-px bg-slate-800 flex-1"></div>
-                    </div>
-                    <h2 class="text-2xl font-bold text-slate-100">Foreground Execution Architecture & Power Optimization Exemptions</h2>
-                    
                     <p>
-                        Modern Android operating system releases incorporate aggressive power management heuristics (such as Doze Mode, App Standby Buckets, and OEM task-killing daemons) engineered to throttle background execution. Because Dynamic Edge Gesture Control is a core utility that users expect to respond instantaneously (in under 10 milliseconds) to an edge swipe, the application declares specialized foreground service types:
+                        <strong>Absolute Data Retention & Guaranteed Deletion Mechanisms:</strong> Because we do not use cloud databases, the lifecycle of your data is entirely in your hands. Local app configurations, elaborate JSON gesture mappings, custom encrypted note files, and rapidly captured media stay physically on your device's persistent storage until you enact one of the following terminal actions:
                     </p>
+                    <ul class="space-y-3 list-disc list-inside text-xs sm:text-sm text-slate-300 pl-4 bg-slate-900/40 p-4 rounded-xl border border-slate-800">
+                        <li><strong>Granular In-App Deletion:</strong> You manually delete individual gesture triggers, purge specific media items, or securely wipe note strings from inside the app's configuration UI.</li>
+                        <li><strong>System-Level Data Clearing:</strong> You utilize the Android OS settings to systematically wipe the application's entire database by navigating to <code>Settings &rarr; Apps &rarr; Dynamic Edge Gesture Control &rarr; Storage &rarr; Clear Data / Clear Storage</code>. This irrevocably destroys all configurations.</li>
+                        <li><strong>Total Eradication via Uninstallation:</strong> You uninstall the application completely from your device. When this happens, the Android Operating System automatically and permanently wipes the application's local sandbox storage directory, completely vaporizing all settings, logs, and preferences associated with it.</li>
+                    </ul>
+                </div>
+            </section>
 
-                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4 text-xs font-mono">
-                        <div class="border border-slate-800 bg-[#0d131f] p-4 rounded-lg space-y-2">
-                            <span class="text-blue-400 font-semibold block">FOREGROUND_SERVICE_SPECIAL_USE</span>
-                            <p class="text-slate-400 font-sans text-xs">
-                                Declared under Android 14+ requirements to sustain the gesture processing loop without background throttling. The user is perpetually informed of this active state via an ongoing system notification.
-                            </p>
-                        </div>
-                        <div class="border border-slate-800 bg-[#0d131f] p-4 rounded-lg space-y-2">
-                            <span class="text-blue-400 font-semibold block">RECEIVE_BOOT_COMPLETED</span>
-                            <p class="text-slate-400 font-sans text-xs">
-                                Automatically registers a <code class="text-slate-300">BroadcastReceiver</code> when the operating system completes booting, re-initializing configured edge zones so users do not have to manually launch the app after a restart.
-                            </p>
-                        </div>
-                        <div class="border border-slate-800 bg-[#0d131f] p-4 rounded-lg space-y-2">
-                            <span class="text-blue-400 font-semibold block">WAKE_LOCK</span>
-                            <p class="text-slate-400 font-sans text-xs">
-                                Prevents the system CPU from falling into deep sleep during active multi-step gesture sequences or rapid swipe-and-hold radial menu transformations.
-                            </p>
-                        </div>
-                        <div class="border border-slate-800 bg-[#0d131f] p-4 rounded-lg space-y-2">
-                            <span class="text-blue-400 font-semibold block">REQUEST_IGNORE_BATTERY_OPTIMIZATIONS</span>
-                            <p class="text-slate-400 font-sans text-xs">
-                                Prompts the user to grant an exemption from battery optimization rules. This prevents aggressive OEM background killers from severing touch hooks during low battery conditions.
-                            </p>
-                        </div>
-                    </div>
-                </section>
+            <!-- Section 8: Children's Privacy -->
+            <section class="policy-section glass-panel rounded-2xl sm:rounded-3xl p-5 sm:p-8 md:p-10 shadow-xl relative overflow-hidden">
+                <div class="absolute top-0 left-0 w-1 sm:w-1.5 h-full bg-gradient-to-b from-blue-500 to-indigo-500"></div>
+                <h2 class="text-lg sm:text-2xl font-bold text-slate-100 mb-3 sm:mb-4 flex items-center gap-2.5">
+                    <span class="text-blue-400 text-xs sm:text-sm font-extrabold uppercase tracking-widest bg-blue-500/10 px-2 py-0.5 sm:py-1 rounded-md border border-blue-500/20">08</span>
+                    Strict Adherence to Children's Privacy Protocols (COPPA & GDPR-K)
+                </h2>
+                <p class="text-slate-300 text-sm sm:text-base leading-relaxed mb-4">
+                    Dynamic Edge Gesture Control is fundamentally designed, marketed, and architected as an advanced, highly technical system utility app intended for power users and mature audiences seeking to customize their OS experience. It is expressly and unequivocally not directed at, nor intended to appeal to, children under the age of 13 (or under the age of 16 in specific jurisdictions governed by the European Union's GDPR-K regulations). 
+                </p>
+                <p class="text-slate-300 text-sm sm:text-base leading-relaxed">
+                    We do not knowingly solicit, request, or collect any personal identifiable information, telemetry data, or digital fingerprints from children. If you are a parent, legal guardian, or authorized supervisor and you discover or suspect that your minor child has provided us with any form of personal information through an unintended interaction with our advertising partners, we implore you to contact us immediately using the information provided below so that we may take swift, decisive action to ensure any inadvertently captured data is purged from the relevant analytics endpoints.
+                </p>
+            </section>
 
-                <!-- 07. Package Visibility -->
-                <section id="package-visibility" class="content-section space-y-6">
-                    <div class="flex items-center gap-3">
-                        <span class="text-xs font-mono text-blue-400 font-bold tracking-widest uppercase">Section 07</span>
-                        <div class="h-px bg-slate-800 flex-1"></div>
-                    </div>
-                    <h2 class="text-2xl font-bold text-slate-100">Package Visibility Architecture (QUERY_ALL_PACKAGES Declaration)</h2>
+            <!-- Section 9: Developer Contact & Support -->
+            <section id="contact" class="policy-section glass-panel rounded-2xl sm:rounded-3xl p-5 sm:p-8 md:p-10 shadow-xl relative overflow-hidden border-2 border-blue-500/30">
+                <div class="absolute top-0 left-0 w-1 sm:w-1.5 h-full bg-gradient-to-b from-blue-500 to-indigo-500"></div>
+                <h2 class="text-lg sm:text-2xl font-bold text-slate-100 mb-3 sm:mb-4 flex items-center gap-2.5">
+                    <span class="text-blue-400 text-xs sm:text-sm font-extrabold uppercase tracking-widest bg-blue-500/10 px-2 py-0.5 sm:py-1 rounded-md border border-blue-500/20">09</span>
+                    Direct Developer Contact & Comprehensive Technical Support
+                </h2>
+                <p class="text-slate-300 text-sm sm:text-base leading-relaxed mb-4">
+                    Transparency is a continuous dialogue, not a static document. If you have any lingering questions, incredibly specific technical bug reports, feature architecture suggestions, or deep privacy inquiries regarding how Dynamic Edge Gesture Control interacts with your specific hardware configuration, we strongly encourage you to reach out directly to the core development desk.
+                </p>
+                <p class="text-slate-300 text-sm sm:text-base leading-relaxed mb-8">
+                    When submitting a bug report via email, please ensure you leave the automatically appended Device Diagnostics block intact, as knowing your exact Android OS version and device manufacturer model is absolutely critical for debugging complex Accessibility Service inconsistencies.
+                </p>
+                
+                <div class="flex flex-col sm:flex-row items-stretch sm:items-center gap-3 sm:gap-5">
+                    <a id="contactSupportBtn" href="#" onclick="openSupportEmail(event)" class="inline-flex items-center justify-center gap-2.5 px-6 py-4 rounded-xl sm:rounded-2xl bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-500 hover:to-indigo-500 text-white font-bold text-sm sm:text-base shadow-lg shadow-blue-500/25 transition-all text-center transform hover:-translate-y-0.5" aria-label="Send support email">
+                        <svg class="w-5 h-5 sm:w-6 sm:h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg>
+                        <span>Initiate Support Ticket</span>
+                    </a>
                     
-                    <div class="border border-slate-800 bg-[#0d131f] p-5 rounded-xl space-y-4">
-                        <div class="flex items-center justify-between font-mono text-xs">
-                            <span class="text-blue-400 font-bold">android.permission.QUERY_ALL_PACKAGES</span>
-                            <span class="text-cyan-400 border border-cyan-500/30 px-2 py-0.5 rounded text-[10px]">Google Play Policy Compliant</span>
-                        </div>
-                        <p class="text-xs text-slate-300 leading-relaxed">
-                            Under Android 11 (API 30) and later versions, apps cannot query the list of installed applications by default. Dynamic Edge Gesture Control requests the high-risk permission <code>QUERY_ALL_PACKAGES</code> because its core functionality cannot operate without direct system package visibility:
-                        </p>
-                        
-                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-2">
-                            <div class="p-3 rounded-lg border border-slate-800 bg-slate-900/50 space-y-1.5">
-                                <span class="text-slate-200 font-semibold text-xs block">1. Dynamic App Launch Docking</span>
-                                <p class="text-[11px] text-slate-400">
-                                    Allows users to search, filter, and assign any installed app or game directly to edge drawer slots, radial pie wedges, or notch tap shortcuts.
-                                </p>
-                            </div>
-                            <div class="p-3 rounded-lg border border-slate-800 bg-slate-900/50 space-y-1.5">
-                                <span class="text-slate-200 font-semibold text-xs block">2. Contextual Gesture Exclusion</span>
-                                <p class="text-[11px] text-slate-400">
-                                    Monitors foreground package transitions to instantly suppress edge touch sensors when blacklisted apps (e.g., first-person shooters, digital drawing pads, or the camera viewfinder) are active.
-                                </p>
-                            </div>
-                        </div>
+                    <button onclick="copyEmail()" class="inline-flex items-center justify-center gap-2 px-6 py-4 rounded-xl sm:rounded-2xl bg-slate-900 border border-slate-700 text-slate-300 font-semibold hover:bg-slate-800 transition-all text-sm sm:text-base text-center shadow-md" aria-label="Copy email address to clipboard">
+                        <span id="copyBtnText">Copy Email Address to Clipboard</span>
+                    </button>
+                </div>
+            </section>
+        </main>
 
-                        <div class="text-[11px] text-slate-400 border-t border-slate-800 pt-3">
-                            <strong class="text-slate-200">Zero Network Transmission Pledge:</strong> Package inventories are queried on-demand directly via <code class="text-slate-300 font-mono">PackageManager.getInstalledApplications()</code> in local volatile RAM. Lists of your installed apps are never compiled into telemetry payloads, shared with advertising SDKs, or synchronized externally.
-                        </div>
-                    </div>
-                </section>
+        <!-- Footer -->
+        <footer class="text-center mt-12 sm:mt-16 pt-8 sm:pt-10 border-t border-slate-800/80 text-slate-500 text-xs sm:text-sm flex flex-col items-center gap-4">
+            <div class="flex flex-wrap items-center justify-center gap-3 mb-3">
+                <div class="inline-flex items-center gap-1.5 px-4 py-2 rounded-full bg-slate-800/60 border border-slate-700/50 text-[11px] sm:text-xs text-slate-400 font-medium">
+                    <svg class="w-3.5 h-3.5 text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg>
+                    <span>Document Last Audited & Updated: September 23, 2026</span>
+                </div>
 
-                <!-- 08. Hardware Interfaces & Media -->
-                <section id="hardware-peripherals" class="content-section space-y-6">
-                    <div class="flex items-center gap-3">
-                        <span class="text-xs font-mono text-blue-400 font-bold tracking-widest uppercase">Section 08</span>
-                        <div class="h-px bg-slate-800 flex-1"></div>
-                    </div>
-                    <h2 class="text-2xl font-bold text-slate-100">Hardware Peripherals, System Settings & Media Interception</h2>
-                    
-                    <p>
-                        The application provides deep integration with physical device hardware to serve as an all-in-one gesture control center. Each hardware permission is isolated to specific, user-configured actions:
-                    </p>
+                <a href="https://bullat859.github.io/app-ads.txt" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 px-4 py-2 rounded-full bg-slate-800/60 border border-slate-700/50 text-[11px] sm:text-xs text-slate-400 hover:text-amber-300 hover:border-amber-500/40 hover:bg-amber-500/10 transition-all font-medium shadow-sm" aria-label="View app-ads.txt file">
+                    <svg class="w-3.5 h-3.5 text-amber-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/></svg>
+                    <span>View Publisher app-ads.txt Registry</span>
+                    <svg class="w-3 h-3 text-slate-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/></svg>
+                </a>
+            </div>
 
-                    <div class="space-y-4 text-xs">
-                        <!-- Camera & Torch -->
-                        <div class="border border-slate-800 bg-[#0d131f] p-4 rounded-xl space-y-2">
-                            <div class="flex items-center justify-between font-mono">
-                                <span class="text-blue-400 font-semibold">CAMERA, FOREGROUND_SERVICE_CAMERA</span>
-                                <span class="text-slate-400 text-[11px]">Flashlight & Quick Snapshot</span>
-                            </div>
-                            <p class="text-slate-300">
-                                Accessed via Android's <code class="text-slate-200">CameraManager</code> to toggle the hardware LED torch when assigned to a gesture (e.g., double-tapping the notch). The camera lens itself is only activated if the user explicitly triggers an on-demand snapshot shortcut. Captured images are saved straight to the device's local gallery or private vault without cloud backup.
-                            </p>
-                        </div>
-
-                        <!-- Audio & Microphone -->
-                        <div class="border border-slate-800 bg-[#0d131f] p-4 rounded-xl space-y-2">
-                            <div class="flex items-center justify-between font-mono">
-                                <span class="text-blue-400 font-semibold">RECORD_AUDIO, FOREGROUND_SERVICE_MICROPHONE</span>
-                                <span class="text-slate-400 text-[11px]">Quick Voice Memo Shortcut</span>
-                            </div>
-                            <p class="text-slate-300">
-                                Enables users to map a hold gesture to quick audio recording. The microphone is <strong>never opened passively in the background</strong>. Recording begins strictly when the gesture is actively performed and stops immediately upon gesture release. Audio files stay in the app's sandboxed local storage directory.
-                            </p>
-                        </div>
-
-                        <!-- Audio & Hardware Settings -->
-                        <div class="border border-slate-800 bg-[#0d131f] p-4 rounded-xl space-y-2">
-                            <div class="flex items-center justify-between font-mono">
-                                <span class="text-blue-400 font-semibold">WRITE_SETTINGS, MODIFY_AUDIO_SETTINGS, VIBRATE</span>
-                                <span class="text-slate-400 text-[11px]">System Volume, Brightness & Haptics</span>
-                            </div>
-                            <p class="text-slate-300">
-                                <code class="text-slate-200 font-mono">WRITE_SETTINGS</code> allows edge slider gestures to smoothly change system screen brightness without opening the Android Quick Settings panel. <code class="text-slate-200 font-mono">MODIFY_AUDIO_SETTINGS</code> controls media and ringer streams directly. <code class="text-slate-200 font-mono">VIBRATE</code> delivers precise tactile feedback through the device's linear resonant actuator (haptic motor) upon successful gesture recognition.
-                            </p>
-                        </div>
-
-                        <!-- Bluetooth -->
-                        <div class="border border-slate-800 bg-[#0d131f] p-4 rounded-xl space-y-2">
-                            <div class="flex items-center justify-between font-mono">
-                                <span class="text-blue-400 font-semibold">BLUETOOTH_CONNECT, BLUETOOTH_SCAN</span>
-                                <span class="text-slate-400 text-[11px]">Accessory Quick Toggle</span>
-                            </div>
-                            <p class="text-slate-300">
-                                Under Android 12+ (API 31+), these permissions allow the app to display paired Bluetooth headphones and peripherals within the radial dock and reconnect to them on command with a single tap.
-                            </p>
-                        </div>
-                    </div>
-                </section>
-
-                <!-- 09. Contacts & Telephony -->
-                <section id="contacts-telephony" class="content-section space-y-6">
-                    <div class="flex items-center gap-3">
-                        <span class="text-xs font-mono text-blue-400 font-bold tracking-widest uppercase">Section 09</span>
-                        <div class="h-px bg-slate-800 flex-1"></div>
-                    </div>
-                    <h2 class="text-2xl font-bold text-slate-100">Speed Dial & Contact Lookup Permissions</h2>
-                    
-                    <p>
-                        Dynamic Edge Gesture Control enables users to configure direct speed-dial shortcuts (for example, swiping diagonally from the upper right corner to immediately call an emergency contact or family member). This functionality is governed by two permissions:
-                    </p>
-
-                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 text-xs font-mono">
-                        <div class="border border-slate-800 bg-[#0d131f] p-4 rounded-lg space-y-2">
-                            <span class="text-blue-400 font-semibold block">CALL_PHONE</span>
-                            <p class="text-slate-400 font-sans text-xs">
-                                Executes an immediate <code class="text-slate-300">Intent.ACTION_CALL</code> without redirecting through the dialer pad when triggered by an assigned shortcut.
-                            </p>
-                        </div>
-                        <div class="border border-slate-800 bg-[#0d131f] p-4 rounded-lg space-y-2">
-                            <span class="text-blue-400 font-semibold block">READ_CONTACTS</span>
-                            <p class="text-slate-400 font-sans text-xs">
-                                Used strictly when opening the contact picker inside the configuration settings to assign a phone number to a gesture. The app never uploads, aggregates, or syncs your address book.
-                            </p>
-                        </div>
-                    </div>
-                </section>
-
-                <!-- 10. Spatial & Geofence Operations -->
-                <section id="location-geofencing" class="content-section space-y-6">
-                    <div class="flex items-center gap-3">
-                        <span class="text-xs font-mono text-blue-400 font-bold tracking-widest uppercase">Section 10</span>
-                        <div class="h-px bg-slate-800 flex-1"></div>
-                    </div>
-                    <h2 class="text-2xl font-bold text-slate-100">Geofencing & Situational Profile Automation</h2>
-                    
-                    <p>
-                        The application provides an optional contextual automation engine capable of altering gesture configurations based on your physical environment (e.g., enabling expanded media controls while in the car or disabling all notification shortcuts while at the workplace).
-                    </p>
-                    <div class="border border-slate-800 bg-[#0d131f] p-5 rounded-xl space-y-3 text-xs">
-                        <div class="flex items-center justify-between font-mono">
-                            <span class="text-blue-400 font-semibold">ACCESS_FINE_LOCATION & ACCESS_COARSE_LOCATION</span>
-                            <span class="text-emerald-400 font-mono text-[10px]">Local Geofence API Only</span>
-                        </div>
-                        <p class="text-slate-300 leading-relaxed">
-                            Rather than polling GPS coordinates continuously in the background (which drains battery life and introduces privacy risks), the app registers local hardware geofences via Google Play Services <code class="text-slate-200 font-mono">GeofencingClient</code>. Location coordinates are stored strictly inside the device's local SQLite database and are <strong>never sent across any network connection</strong>.
-                        </p>
-                    </div>
-                </section>
-
-                <!-- 11. Biometric Enclave Security -->
-                <section id="biometrics" class="content-section space-y-6">
-                    <div class="flex items-center gap-3">
-                        <span class="text-xs font-mono text-blue-400 font-bold tracking-widest uppercase">Section 11</span>
-                        <div class="h-px bg-slate-800 flex-1"></div>
-                    </div>
-                    <h2 class="text-2xl font-bold text-slate-100">Biometric Authentication & Private Vault Encryption</h2>
-                    
-                    <p>
-                        For users who take advantage of the integrated Quick Notes and private media capture features, the application includes an authentication guardrail powered by <code class="text-slate-200 font-mono">USE_BIOMETRIC</code> and <code class="text-slate-200 font-mono">USE_FINGERPRINT</code>.
-                    </p>
-                    <div class="border border-slate-800 bg-[#0d131f] p-5 rounded-xl space-y-3 text-xs">
-                        <p class="text-slate-300 leading-relaxed">
-                            Biometric verification is handled entirely by the Android <code class="text-slate-200 font-mono">BiometricPrompt</code> subsystem. The application never accesses raw fingerprint bitmaps, retinal scans, or facial geometry data. All authentication checks occur inside the hardware-backed <strong>Trusted Execution Environment (TEE)</strong> or <strong>Secure Element (SE)</strong>.
-                        </p>
-                        <p class="text-slate-400 text-[11px] border-t border-slate-800 pt-2">
-                            Cryptographic keys guarding encrypted notes are derived using the Android Keystore system with AES-256-GCM encryption, guaranteeing that your data remains unreadable even if the physical device is inspected.
-                        </p>
-                    </div>
-                </section>
-
-                <!-- 12. SDK Telemetry & Advertising -->
-                <section id="third-party-sdk" class="content-section space-y-6">
-                    <div class="flex items-center gap-3">
-                        <span class="text-xs font-mono text-blue-400 font-bold tracking-widest uppercase">Section 12</span>
-                        <div class="h-px bg-slate-800 flex-1"></div>
-                    </div>
-                    <h2 class="text-2xl font-bold text-slate-100">Third-Party Software Development Kits (SDKs) & Advertising Telemetry</h2>
-                    
-                    <p>
-                        To ensure sustainable ongoing development while providing a free version of the app, network communication is strictly confined to official developer SDKs provided by Google LLC:
-                    </p>
-
-                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6 text-xs">
-                        <!-- AdMob -->
-                        <div class="border border-slate-800 bg-[#0d131f] p-5 rounded-xl space-y-3">
-                            <div class="flex items-center justify-between font-mono">
-                                <span class="text-slate-100 font-bold">Google Mobile Ads (AdMob)</span>
-                                <span class="text-amber-400 text-[10px] border border-amber-500/30 px-1.5 py-0.5 rounded">Ad Network</span>
-                            </div>
-                            <p class="text-slate-300 leading-relaxed">
-                                AdMob serves banner, interstitial, and rewarded video ads. The SDK uses the Google Advertising ID (<code class="text-slate-200">AD_ID</code>) to serve personalized or non-personalized ads, perform frequency capping, and detect fraudulent clicks under <a href="https://policies.google.com/technologies/ads" target="_blank" rel="noopener noreferrer" class="text-blue-400 hover:underline">Google's Advertising Policies</a>.
-                            </p>
-                            <div class="text-[11px] text-slate-400 border-t border-slate-800/80 pt-2">
-                                <strong>Opt-Out Mechanism:</strong> You can reset or delete your Advertising ID at any time via <code class="text-slate-300 font-mono">Android Settings &gt; Privacy &gt; Ads</code>.
-                            </div>
-                        </div>
-
-                        <!-- Firebase Crashlytics -->
-                        <div class="border border-slate-800 bg-[#0d131f] p-5 rounded-xl space-y-3">
-                            <div class="flex items-center justify-between font-mono">
-                                <span class="text-slate-100 font-bold">Firebase Crashlytics</span>
-                                <span class="text-blue-400 text-[10px] border border-blue-500/30 px-1.5 py-0.5 rounded">Diagnostics</span>
-                            </div>
-                            <p class="text-slate-300 leading-relaxed">
-                                When a crash or unhandled exception occurs, Crashlytics captures diagnostic state information (device brand/model, OS build number, free RAM, and exception stack traces). These logs contain no personally identifiable user records and are used solely to debug app crashes.
-                            </p>
-                            <div class="text-[11px] text-slate-400 border-t border-slate-800/80 pt-2">
-                                <strong>Data Retention:</strong> Diagnostic crash reports are retained on Google Cloud infrastructure for a rolling period of 90 days before automatic deletion.
-                            </div>
-                        </div>
-                    </div>
-                </section>
-
-                <!-- 13. Billing Engine & Cryptography -->
-                <section id="billing-transactions" class="content-section space-y-6">
-                    <div class="flex items-center gap-3">
-                        <span class="text-xs font-mono text-blue-400 font-bold tracking-widest uppercase">Section 13</span>
-                        <div class="h-px bg-slate-800 flex-1"></div>
-                    </div>
-                    <h2 class="text-2xl font-bold text-slate-100">In-App Purchases & License Verification Engine</h2>
-                    
-                    <p>
-                        The Pro upgrade for Dynamic Edge Gesture Control is processed entirely through the Google Play In-App Billing subsystem using the official Google Play Billing Library:
-                    </p>
-                    <div class="border border-slate-800 bg-[#0d131f] p-5 rounded-xl space-y-3 text-xs">
-                        <div class="flex items-center justify-between font-mono">
-                            <span class="text-blue-400 font-semibold">com.android.vending.BILLING & CHECK_LICENSE</span>
-                            <span class="text-emerald-400 font-mono text-[10px]">Zero Financial Footprint</span>
-                        </div>
-                        <p class="text-slate-300 leading-relaxed">
-                            The application never receives, processes, or stores credit card details, debit card credentials, bank account numbers, or billing addresses. Payment transactions are executed directly within Google Play's PCI-DSS-compliant security enclave.
-                        </p>
-                        <p class="text-slate-400 text-[11px] border-t border-slate-800 pt-2">
-                            The application receives only an asymmetric, cryptographically signed purchase token from Google Play verifying that a valid license has been issued.
-                        </p>
-                    </div>
-                </section>
-
-                <!-- 14. Retention, Erasure & Deletion -->
-                <section id="data-lifecycle" class="content-section space-y-6">
-                    <div class="flex items-center gap-3">
-                        <span class="text-xs font-mono text-blue-400 font-bold tracking-widest uppercase">Section 14</span>
-                        <div class="h-px bg-slate-800 flex-1"></div>
-                    </div>
-                    <h2 class="text-2xl font-bold text-slate-100">Data Lifecycle, Retention Schedules & Total Erasure Protocols</h2>
-                    
-                    <p>
-                        Because the application operates with a local-first storage design, data retention is managed directly by you on your physical device:
-                    </p>
-
-                    <div class="border border-slate-800 rounded-xl overflow-hidden bg-[#0b0f19] text-xs">
-                        <div class="grid grid-cols-1 md:grid-cols-3 divide-y md:divide-y-0 md:divide-x divide-slate-800">
-                            <div class="p-5 space-y-2">
-                                <span class="font-mono text-blue-400 font-semibold block">Configuration & Notes</span>
-                                <p class="text-slate-400">
-                                    Stored in private flash memory. Cleared immediately whenever you tap <em>Clear Storage</em> in Android Settings or uninstall the app.
-                                </p>
-                            </div>
-                            <div class="p-5 space-y-2">
-                                <span class="font-mono text-blue-400 font-semibold block">Volatile RAM Buffers</span>
-                                <p class="text-slate-400">
-                                    Gesture coordinate metrics ($x, y$ coordinates) are held in RAM for a matter of milliseconds and cleared immediately upon gesture evaluation.
-                                </p>
-                            </div>
-                            <div class="p-5 space-y-2">
-                                <span class="font-mono text-blue-400 font-semibold block">Crash Diagnostics</span>
-                                <p class="text-slate-400">
-                                    Anonymized crash telemetry logged via Firebase Crashlytics is automatically purged after 90 days in accordance with Google Cloud retention policies.
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                </section>
-
-                <!-- 15. International Statutory Rights -->
-                <section id="statutory-rights" class="content-section space-y-6">
-                    <div class="flex items-center gap-3">
-                        <span class="text-xs font-mono text-blue-400 font-bold tracking-widest uppercase">Section 15</span>
-                        <div class="h-px bg-slate-800 flex-1"></div>
-                    </div>
-                    <h2 class="text-2xl font-bold text-slate-100">International Regulatory Compliance & Statutory Rights</h2>
-                    
-                    <p>
-                        This Privacy Policy is designed to comply with worldwide privacy frameworks, including the European General Data Protection Regulation (<strong>GDPR</strong>), the California Consumer Privacy Act / California Privacy Rights Act (<strong>CCPA/CPRA</strong>), the Brazilian General Data Protection Law (<strong>LGPD</strong>), and India’s Digital Personal Data Protection Act (<strong>DPDPA</strong>).
-                    </p>
-
-                    <div class="space-y-3 text-xs text-slate-300">
-                        <div class="p-4 rounded-lg border border-slate-800 bg-[#0d131f] space-y-1">
-                            <span class="text-slate-100 font-semibold block">European Union & UK Rights (GDPR)</span>
-                            <p class="text-slate-400">
-                                You hold the right to access, rectify, or request deletion of personal information. Because our application does not operate a user account database, exercising your "Right to be Forgotten" is as simple as clearing application data or uninstalling the app, which immediately purges all locally stored data.
-                            </p>
-                        </div>
-                        <div class="p-4 rounded-lg border border-slate-800 bg-[#0d131f] space-y-1">
-                            <span class="text-slate-100 font-semibold block">California Privacy Rights (CCPA / CPRA Notice)</span>
-                            <p class="text-slate-400">
-                                We do not "sell" or "share" personal user data for monetary consideration. In-app advertising through Google AdMob uses standardized identifiers as detailed in this policy. You have the right to request disclosure of categories of information collected or opt out of personalized ad targeting via your device's privacy settings.
-                            </p>
-                        </div>
-                    </div>
-                </section>
-
-                <!-- 16. Protection of Minors -->
-                <section id="children-policy" class="content-section space-y-6">
-                    <div class="flex items-center gap-3">
-                        <span class="text-xs font-mono text-blue-400 font-bold tracking-widest uppercase">Section 16</span>
-                        <div class="h-px bg-slate-800 flex-1"></div>
-                    </div>
-                    <h2 class="text-2xl font-bold text-slate-100">Protection of Minors (COPPA & Age-Gate Standards)</h2>
-                    
-                    <p>
-                        Dynamic Edge Gesture Control is a general audience productivity utility designed for individuals who require advanced gesture controls on their Android devices. The application does not intentionally collect, solicit, or maintain personal information from children under the age of 13 (or under 16 within the European Union).
-                    </p>
-                    <p class="text-xs text-slate-400">
-                        If a parent or guardian discovers that their child has configured the app and saved personal voice memos, photos, or notes, those assets can be removed instantly by clearing the app's local storage or uninstalling the software.
-                    </p>
-                </section>
-
-                <!-- 17. Developer Contact & Redress -->
-                <section id="contact-redress" class="content-section space-y-6 border-t border-slate-800 pt-10">
-                    <div class="flex items-center gap-3">
-                        <span class="text-xs font-mono text-blue-400 font-bold tracking-widest uppercase">Section 17</span>
-                        <div class="h-px bg-slate-800 flex-1"></div>
-                    </div>
-                    <h2 class="text-2xl font-bold text-slate-100">Official Contact, Bug Triage & Inquiries</h2>
-                    
-                    <p class="text-slate-400 text-xs leading-relaxed">
-                        If you have questions regarding this technical architecture specification, wish to report a potential security vulnerability, or have inquiries regarding our data handling practices, please contact the developer directly:
-                    </p>
-
-                    <div class="border border-slate-800 bg-gradient-to-r from-[#0d131f] to-[#141d2e] p-6 rounded-xl flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
-                        <div class="space-y-1 font-mono text-xs">
-                            <span class="text-slate-400 block">Lead Architect & Maintainer</span>
-                            <span class="text-slate-100 font-bold text-sm">Madhusudan Payra</span>
-                            <span class="text-blue-400 block text-xs">m.payra859appsupport@gmail.com</span>
-                        </div>
-                        <div class="flex flex-wrap items-center gap-3 font-mono text-xs">
-                            <a id="emailBtn" href="#" onclick="openDiagnosticMail(event)" class="bg-blue-600 hover:bg-blue-500 text-white px-5 py-2.5 rounded-lg transition-colors font-semibold shadow-lg shadow-blue-600/20">
-                                Send Diagnostic Email
-                            </a>
-                            <button onclick="copyMail()" class="border border-slate-700 bg-slate-800/80 hover:bg-slate-700 text-slate-200 px-4 py-2.5 rounded-lg transition-colors">
-                                <span id="copyText">Copy Address</span>
-                            </button>
-                        </div>
-                    </div>
-                </section>
-
-            </main>
-        </div>
+            <p class="font-medium tracking-wide">&copy; 2026 <a href="https://play.google.com/store/apps/details?id=com.m.payra.gesture.control.app" target="_blank" rel="noopener noreferrer" class="text-slate-300 hover:text-blue-400 underline decoration-slate-700 underline-offset-4 transition-colors">Dynamic Edge Gesture Control</a>. All global rights systematically reserved.</p>
+            <p class="text-[11px] sm:text-xs text-slate-600 max-w-2xl mx-auto leading-relaxed mt-1">Legal Disclaimer: Android, Google Play, Firebase, AdMob, and all related brand assets, logos, and proprietary nomenclatures are the exclusively registered trademarks of Google LLC and Alphabet Inc. This application is an independent software project and is neither affiliated with, endorsed by, nor directly sponsored by Google LLC.</p>
+            <p class="text-xs sm:text-sm text-slate-400 font-bold flex items-center justify-center gap-2 mt-2 py-2 px-4 rounded-full bg-slate-900/50 border border-slate-800/80 w-fit mx-auto shadow-inner">
+                <span class="animate-pulse text-red-500">❤️</span> Meticulously engineered and thoughtfully written by Madhusudan Payra
+            </p>
+        </footer>
     </div>
+    
+    <!-- Scroll to Top Button -->
+    <button id="scrollTopBtn" onclick="window.scrollTo({top: 0, behavior: 'smooth'})" class="fixed bottom-6 right-6 p-3.5 sm:p-4 rounded-full bg-blue-600/90 text-white shadow-[0_0_20px_rgba(37,99,235,0.4)] border border-blue-400/40 opacity-0 translate-y-12 pointer-events-none transition-all duration-500 ease-out z-50 hover:bg-blue-500 hover:-translate-y-1 focus:outline-none focus:ring-4 focus:ring-blue-500/50" aria-label="Scroll to the very top of the page">
+        <svg class="w-5 h-5 sm:w-6 sm:h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 15l7-7 7 7"/></svg>
+    </button>
 
-    <!-- Master Footer -->
-    <footer class="border-t border-slate-800/80 mt-24 py-12 bg-[#080c14] text-xs text-slate-400">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 flex flex-col md:flex-row items-center justify-between gap-6">
-            <div class="flex flex-col sm:flex-row items-center gap-4">
-                <span class="font-semibold text-slate-300">&copy; 2026 Dynamic Edge Gesture Control</span>
-                <span class="hidden sm:inline text-slate-700">|</span>
-                <a href="https://bullat859.github.io/app-ads.txt" target="_blank" rel="noopener noreferrer" class="text-slate-400 hover:text-blue-400 transition-colors font-mono underline decoration-slate-700">app-ads.txt Verification</a>
-            </div>
-            <div class="flex items-center gap-2 font-mono text-[11px] text-slate-400">
-                <span>Designed & Engineered by</span>
-                <span class="text-slate-300 font-semibold">Madhusudan Payra</span>
-            </div>
-        </div>
-    </footer>
-
-    <!-- Diagnostic Script Logic -->
+    <!-- JavaScript Handling & Advanced DOM Interactivity -->
     <script>
-        function openDiagnosticMail(e) {
-            e.preventDefault();
+        /**
+         * Dynamically generates and opens a pre-formatted email template specifically designed
+         * to capture essential device diagnostics to assist with technical support.
+         * @param {Event} event - The click event object
+         */
+        function openSupportEmail(event) {
+            event.preventDefault();
+            
             const ua = navigator.userAgent;
-            let android = "Android (Unknown Version)";
-            let model = "Generic Device";
+            let androidVersion = "Android System (Version Undetected)";
+            let deviceModel = "Generic Android Hardware";
 
-            const vMatch = ua.match(/Android\s([0-9\.]+)/);
-            if (vMatch) android = "Android " + vMatch[1];
-
-            const mMatch = ua.match(/;\s?([^;]+)\sBuild\//);
-            if (mMatch) model = mMatch[1];
-
-            const subject = "Support & Privacy Inquiry: Dynamic Edge Gesture Control";
-            const body = 
-`Hello Madhusudan,
-
-Please describe your question, bug report, or inquiry below:
-[Your message here]
-
-=======================================================
-AUTOMATED SYSTEM DIAGNOSTICS FOR SUPPORT TRIAGE
-=======================================================
-Hardware Device Model: ${model}
-Operating System Version: ${android}
-Software Package: com.m.payra.gesture.control.app
-Architecture: Local-First Sandbox Engine
-Browser Agent: ${ua}
-Timestamp: ${new Date().toISOString()}
-=======================================================`;
-
-            window.location.href = `mailto:m.payra859appsupport@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
-        }
-
-        async function copyMail() {
-            const email = "m.payra859appsupport@gmail.com";
-            const btn = document.getElementById("copyText");
-            try {
-                await navigator.clipboard.writeText(email);
-                btn.innerText = "Copied to Clipboard!";
-            } catch (err) {
-                const el = document.createElement("input");
-                el.value = email;
-                document.body.appendChild(el);
-                el.select();
-                document.execCommand("copy");
-                document.body.removeChild(el);
-                btn.innerText = "Copied to Clipboard!";
+            // Utilize Regex to intelligently parse the User-Agent string for device-specific metadata
+            if (/Android/i.test(ua)) {
+                const matchVer = ua.match(/Android\s([0-9\.]+)/);
+                if (matchVer) androidVersion = "Android OS " + matchVer[1];
+                
+                const matchModel = ua.match(/;\s?([^;]+)\sBuild\//);
+                if (matchModel) deviceModel = matchModel[1];
             }
-            setTimeout(() => { btn.innerText = "Copy Address"; }, 2500);
+
+            const subject = "High-Priority Support Request - Dynamic Edge Gesture Control";
+            
+            const body = 
+`Hello Dynamic Edge Gesture Control Support Team,
+
+[Please meticulously describe your specific issue, detailed inquiry, or highly technical feature suggestion in this space. The more context you provide, the faster we can assist you.]
+
+----------------------------------------
+AUTOMATED DEVICE DIAGNOSTICS PAYLOAD
+Device Hardware Model: ${deviceModel}
+Operating System Version: ${androidVersion}
+Application Package Name: com.m.payra.gesture.control.app
+----------------------------------------`;
+
+            const mailtoUrl = `mailto:m.payra859appsupport@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+            window.location.href = mailtoUrl;
         }
 
+        /**
+         * Asynchronously copies the official support email address to the user's system clipboard
+         * utilizing modern navigator.clipboard APIs, falling back to document.execCommand for legacy support.
+         */
+        async function copyEmail() {
+            const email = "m.payra859appsupport@gmail.com";
+            const btnText = document.getElementById('copyBtnText');
+            const originalText = btnText.innerText;
+            
+            try {
+                // Attempt to use the modern, secure Clipboard API
+                await navigator.clipboard.writeText(email);
+                btnText.innerText = "Successfully Copied to Clipboard! ✓";
+                btnText.parentElement.classList.add('bg-emerald-900/50', 'border-emerald-700', 'text-emerald-300');
+                btnText.parentElement.classList.remove('bg-slate-900', 'border-slate-700', 'text-slate-300');
+            } catch (err) {
+                // Fallback mechanism for browsers blocking the modern Clipboard API
+                const tempInput = document.createElement('input');
+                tempInput.value = email;
+                document.body.appendChild(tempInput);
+                tempInput.select();
+                document.execCommand('copy');
+                document.body.removeChild(tempInput);
+                btnText.innerText = "Successfully Copied to Clipboard! ✓";
+                btnText.parentElement.classList.add('bg-emerald-900/50', 'border-emerald-700', 'text-emerald-300');
+                btnText.parentElement.classList.remove('bg-slate-900', 'border-slate-700', 'text-slate-300');
+            }
+
+            // Restore the original button state after a 3-second delay
+            setTimeout(() => {
+                btnText.innerText = originalText;
+                btnText.parentElement.classList.remove('bg-emerald-900/50', 'border-emerald-700', 'text-emerald-300');
+                btnText.parentElement.classList.add('bg-slate-900', 'border-slate-700', 'text-slate-300');
+            }, 3500);
+        }
+        
+        /**
+         * Listens to the global window scroll event to dynamically calculate and update the width
+         * of the top progress bar indicator, while simultaneously managing the visibility state
+         * and hardware-accelerated translation of the 'Scroll to Top' floating action button.
+         */
         window.addEventListener('scroll', () => {
-            const winScroll = document.documentElement.scrollTop || document.body.scrollTop;
+            const winScroll = document.body.scrollTop || document.documentElement.scrollTop;
             const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
-            const scrolled = (winScroll / height) * 100;
-            document.getElementById('progressBar').style.width = scrolled + '%';
+            const scrolledPercentage = (winScroll / height) * 100;
+            
+            // Update the CSS width property of the progress bar
+            document.getElementById('progressBar').style.width = scrolledPercentage + '%';
+            
+            // Logic for toggling the Scroll to Top button visibility
+            const scrollTopBtn = document.getElementById('scrollTopBtn');
+            if (winScroll > 400) {
+                scrollTopBtn.classList.remove('opacity-0', 'translate-y-12', 'pointer-events-none');
+                scrollTopBtn.classList.add('opacity-100', 'translate-y-0');
+            } else {
+                scrollTopBtn.classList.add('opacity-0', 'translate-y-12', 'pointer-events-none');
+                scrollTopBtn.classList.remove('opacity-100', 'translate-y-0');
+            }
         });
     </script>
 </body>
